@@ -1,2 +1,89 @@
-<p>register works!</p>
-<h1>hello</h1>
+
+
+
+    <h1>BlackRock</h1>
+
+    <div class="menuregister mx-5 d-grid gap-3">
+
+        <div class="mt-3 d-flex justify-content-center">
+            <input name="email" type="text" placeholder="Email" [(ngModel)]="email">
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <input type="password" placeholder="Contraseña" [(ngModel)]="password" (input)="checkPassword( $event )">
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <input type="password" placeholder="Repete contraseña" [(ngModel)]="passwordConfirm" (input)="checkPassword( $event )">
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <p class="text-danger">{{passwordmessage}}</p>
+        </div>
+        
+        <div>
+            <hr>
+        </div>
+        
+        
+        
+        <div class="d-flex justify-content-center">
+            <input name="age" type="text" placeholder="Edad" [(ngModel)]="age">
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <select name="sex" id="sex" [(ngModel)]="sex" >
+                <option hidden selected>Sexo</option>
+                <option value="male">Hombre</option>
+                <option value="female">Mujer</option>
+                <option value="Binary">Binario</option>
+            </select>  
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <input class="m-auto mt-2" type="text" name="cp" (input)="ls( $event )" placeholder="Codigo Postal">
+        </div>
+            
+           
+        
+        
+            <div class="d-flex justify-content-center">
+                <input type="text" placeholder="Estado" [value]=(state)>
+            </div>
+        
+            <div class="d-flex justify-content-center">
+                <input type="text" placeholder="Ciudad" [value]=(city)>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <select name="study" id="study" [(ngModel)]="study">
+                    <option hidden selected>Estudios</option>
+                    <option value="male">Primaria</option>
+                    <option value="female">Secundario</option>
+                    <option value="Binary">Bachillerato</option>
+                    <option value="Binary">Profecional</option>
+                    <option value="Binary">Maestria</option>
+                </select>  
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <select name="job" id="job" [(ngModel)]="job">
+                    <option hidden selected>Ocupacion</option>
+                    <option value="male">Independiente</option>
+                    <option value="female">Empresario</option>
+                    <option value="Binary">Empleado</option>
+                    <option value="Binary">Estudiante</option>
+                    <option value="Binary">Desocupado</option>
+                </select>  
+            </div>
+
+            
+            <div class="mb-3 d-flex justify-content-center">
+                <button (click)="sendForm()">Continuar</button>
+            </div>
+        
+    </div>
+
+
+
+
