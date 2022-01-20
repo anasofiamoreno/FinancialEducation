@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.custom-slider .ngx-slider .ngx-slider-bar {
+   
+    width: 100%;
+    height: 20px !important;
+    z-index: 1;
+    background: #d8e0f3;
+    border-radius: 2px;
+
+}
+
+.custom-slider .ngx-slider .ngx-slider-pointer {
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    top: -14px;
+    background-color: #131414;
+    z-index: 3;
+    border-radius: 30px;
+}
+
+.custom-slider .ngx-slider .ngx-slider-pointer:after {
+    
+    display: none;
+    
+}

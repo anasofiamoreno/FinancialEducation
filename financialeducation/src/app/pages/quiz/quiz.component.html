@@ -46,7 +46,7 @@
   <div id="question2" class="mb-3">
     <h3>¿Qué tan confiado de tus conocimientos financieros te sientes al tomar decisiones de inversión?</h3>
     <!-- <input type="range" class="form-range " id="customRange2"> -->
-    <div class="slider">
+    <div class="custom-slider">
     <ngx-slider  [(value)]="value" [options]="options"></ngx-slider>
     </div>
   </div>
@@ -100,8 +100,30 @@
 
   <div id="question5" class="mb-3">
     <p>¿Por qué quieres aprender sobre finanzas?</p>
-    <input type="checkbox" id="q2option1" name="question1" value="false">
-    <label for="q2option1"> I have a bike</label><br>
+    <div class="card mb-3" style="width: 18rem;">
+      <input type="checkbox" id="q5option1" name="question5" value="false" class="btn-check">
+      <label for="q5option1" class="btn btn-outline-dark"><img src="..." class="card-img-top" alt="Acciones"><p class="card-text">Quiero tomar las riendas de mi futuro financiero</p></label>  
+    </div>
+
+    <div class="card mb-3" style="width: 18rem;">
+      <input type="checkbox" id="q5option2" name="question5" value="false" class="btn-check">
+      <label for="q5option2" class="btn btn-outline-dark"><img src="..." class="card-img-top" alt="Acciones"><p class="card-text">Quiero comprar una casa</p></label>  
+    </div>
+
+    <div class="card mb-3" style="width: 18rem;">
+      <input type="checkbox" id="q5option3" name="question5" value="false" class="btn-check">
+      <label for="q5option3" class="btn btn-outline-dark"><img src="..." class="card-img-top" alt="Acciones"><p class="card-text">Tengo un objetivo en mente al que quiero llegar</p></label>  
+    </div>
+
+    <div class="card mb-3" style="width: 18rem;">
+      <input type="checkbox" id="q5option4" name="question5" value="false" class="btn-check">
+      <label for="q5option4" class="btn btn-outline-dark"><img src="..." class="card-img-top" alt="Acciones"><p class="card-text">Quiero expandir mis conocimientos</p></label>  
+    </div>
+
+    <div class="card mb-3" style="width: 18rem;">
+      <input type="checkbox" id="q5option5" name="question5" value="false" class="btn-check">
+      <label for="q5option5" class="btn btn-outline-dark"><img src="..." class="card-img-top" alt="Acciones"><p class="card-text">Conozco gente que ha comenzado a invertir y quiero intentarlo</p></label>  
+    </div>
   </div>
 
 
