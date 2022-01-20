@@ -11,11 +11,12 @@ import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
 })
 export class RegisterComponent implements OnInit {
 
+  name: string | null = ""
   public email: string = ""
   password: string = ""
   passwordConfirm:  string = ""
-  sex: string = "Sexo"
-  age: string = ""
+  sex: string | null = "Sexo"
+  age: string | null = ""
   cp: string = "28986"
   sepomex: string = ""
   state: string = ""
@@ -23,7 +24,8 @@ export class RegisterComponent implements OnInit {
   study: string = "Estudios"
   job: string = "Ocupacion"
   passwordmessage: string = ""
-  levelgeded: string = "2"
+  levelgeded: string | null = "2"
+  namelevel: string = ""
  
 
   constructor(private http: HttpClient, private db: Firestore, private auth: Auth) {
@@ -92,6 +94,7 @@ export class RegisterComponent implements OnInit {
           study: this.study,
           job: this.job
         });
+        localStorage.clear();
         window.location.href = '/courses'
       }
     })
@@ -126,6 +129,24 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.name = localStorage.getItem('name');
+    this.levelgeded = localStorage.getItem('level');
+    this.age = localStorage.getItem('age');
+    this.sex = localStorage.getItem('gender');
+
+    switch(this.levelgeded){
+      case "1": this.namelevel = 'Elfo ahorrador'
+      break
+      case "2": this.namelevel = "Escudero del dinero"
+      break
+      case "3": this.namelevel = "Caballero del ahorro"
+      break
+      case "4": this.namelevel = "Mago de las finanzas"
+      break
+      case "5": this.namelevel = "Leyenda de las inversiones"
+      break
+      default :
+    }
   }
 
 }
