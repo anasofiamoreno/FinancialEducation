@@ -8,7 +8,6 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,
