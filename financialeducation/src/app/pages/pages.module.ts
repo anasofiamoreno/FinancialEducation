@@ -5,15 +5,15 @@ import { QuizComponent } from './quiz/quiz.component';
 import { CoursesComponent } from './courses/courses.component';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,
     QuizComponent,
-    CoursesComponent
+    CoursesComponent,
+
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class PagesModule { }
