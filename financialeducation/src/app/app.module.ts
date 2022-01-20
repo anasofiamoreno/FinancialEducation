@@ -8,11 +8,11 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth, AuthModule } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthModule } from './auth/auth.module';
+import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PagesModule } from './pages/pages.module';
 import { RegisterComponent } from './auth/register/register.component';
-
 
 @NgModule({
   declarations: [
@@ -20,6 +20,9 @@ import { RegisterComponent } from './auth/register/register.component';
     RegisterComponent
   ],
   imports: [
+    AuthModule,
+    PagesModule,
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),

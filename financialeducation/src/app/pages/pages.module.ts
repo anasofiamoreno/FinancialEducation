@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CoursesComponent } from './courses/courses.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -18,8 +20,10 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgxSliderModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 export class PagesModule { }
