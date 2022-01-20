@@ -24,3 +24,13 @@
     display: none;
     
 }
+
+.custom-slider .ngx-slider .ngx-slider-bar-wrapper {
+    left: 0;
+    box-sizing: border-box;
+    margin-top: -16px;
+    padding-top: 16px;
+    width: 75%;
+    height: 32px;
+    z-index: 1;
+}

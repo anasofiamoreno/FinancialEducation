@@ -1,3 +1,10 @@
-
-
- 
+#check::after {
+    background-color: #fefefe;
+    border: 1px solid;
+    border-color: rgb(2, 2, 2);
+    border-radius: 5px;
+    cursor:pointer;
+  }
+  input[type="radio"]:checked + span {
+    color: #f00;
+  }
