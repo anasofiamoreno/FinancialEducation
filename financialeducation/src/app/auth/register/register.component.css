@@ -2,8 +2,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 500px;
+    width: 40%;
     border: solid;
+    margin-top: 20px;
+}
+
+.menuConcretulatioins{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.banner{
+    display:flex;
+    align-items: center;
+    height: 100px;
+    
 }
 
 .line{
@@ -11,6 +27,16 @@
     flex-direction: row;
     width: auto;
 }
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    width: 60%;
+    
+}
+    
 
 input{
     border-top: none;
@@ -35,6 +61,18 @@ select{
 
 #dd{
     width: 80%;
+}
+
+.textCongratulacions{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.btn_continue{
+    background-color: orangered;
+    color: black;
+    font-weight: bold;
+    font-size: large;
 }
 
 

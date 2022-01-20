@@ -23,6 +23,7 @@ export class RegisterComponent implements OnInit {
   study: string = "Estudios"
   job: string = "Ocupacion"
   passwordmessage: string = ""
+  levelgeded: string = "2"
  
 
   constructor(private http: HttpClient, private db: Firestore, private auth: Auth) {
@@ -40,17 +41,13 @@ export class RegisterComponent implements OnInit {
 
   getAdress(){
     let option = this.createRequestOption()
-    console.log("entro")
 
     return this.http.get<any>(this.sepomex,{ headers: option})
        .subscribe(resp=>{ 
-         console.log(resp)
         this.state = resp.codigo_postal.estado
         this.city = resp.codigo_postal.municipio
         
-        
        })
-    
   }
 
 
@@ -59,7 +56,6 @@ export class RegisterComponent implements OnInit {
   checkCp(){
     this.sepomex =  "https://sepomex.razektheone.com/codigo_postal?cp=" + this.cp
     this.getAdress()
-    console.log(this.cp)
   }
 
   ls( event: any){
@@ -76,40 +72,37 @@ export class RegisterComponent implements OnInit {
   
     console.log(this.sex)
 
-    // if(this.password.length <= 7 || (this.password != this.passwordConfirm) || this.email == ""){
-    //   return(alert("Datos Incompletos, revise correo y constraseña"))
-    // }
+    if(this.password.length <= 7 || (this.password != this.passwordConfirm) || this.email == ""){
+      return(alert("Datos Incompletos, revise correo y constraseña"))
+    }
 
 
 
-    // await createUserWithEmailAndPassword(this.auth, this.email, this.password)
-    // .then( async userCredential => {
-    //   if(userCredential.user){
-    //     await setDoc(doc(this.db,"costumer",this.email.slice(0,this.email.indexOf("@"))), {
-    //       name: this.email.slice(0,this.email.indexOf("@")),
-    //       email: this.email,
-    //       age: this.age,
-    //       sex: this.sex,
-    //       cp: this.cp,
-    //       state: this.state,
-    //       city: this.city,
-    //       study: this.study,
-    //       job: this.job
-    
-    //     });
-    //     //Redireccion a pagina de usuario
-    //   }
-    // })
-    // .catch(error => {
-    //   console.log(error.code)
-    //   if(error.code == 'auth/email-already-in-use'){
-    //     alert("Usuario ya registrado")
-    //   }
-    //   if(error.code == 'auth/weak-password'){
-    //     alert("Contraseña Corta")
-    //   }
-
-    // })
+    await createUserWithEmailAndPassword(this.auth, this.email, this.password)
+    .then( async userCredential => {
+      if(userCredential.user){
+        await setDoc(doc(this.db,"costumer",this.email.slice(0,this.email.indexOf("@"))), {
+          name: this.email.slice(0,this.email.indexOf("@")),
+          email: this.email,
+          age: this.age,
+          sex: this.sex,
+          cp: this.cp,
+          state: this.state,
+          city: this.city,
+          study: this.study,
+          job: this.job
+        });
+        window.location.href = '/courses'
+      }
+    })
+    .catch(error => {
+      if(error.code == 'auth/email-already-in-use'){
+        alert("Usuario ya registrado")
+      }
+      if(error.code == 'auth/weak-password'){
+        alert("Contraseña Corta")
+      }
+    })
     
   
 
@@ -129,9 +122,6 @@ export class RegisterComponent implements OnInit {
         this.passwordmessage = "Contraseñas no coinsiden"
       }
     }
-
-    
-    console.log(event.target.value)
     
   }
 
