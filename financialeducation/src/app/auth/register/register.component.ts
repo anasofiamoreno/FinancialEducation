@@ -92,7 +92,9 @@ export class RegisterComponent implements OnInit {
           state: this.state,
           city: this.city,
           study: this.study,
-          job: this.job
+          job: this.job,
+          level: this.levelgeded,
+          namelevel: this.namelevel
         });
         localStorage.clear();
         window.location.href = '/courses'

@@ -1,0 +1,98 @@
+
+.banner{
+    display:flex;
+    align-items: center;
+    height: 100px;
+    
+}
+
+.level-group{
+    display: flex;
+    height: 400px;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.img-size{
+    width: 80%;
+}
+
+.img-size-course{
+    height: 300px;
+}
+
+.img-size:hover{
+    width: 350px;
+    height: 350px;
+}
+
+.btn-level{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    background-color: black;
+}
+
+.minibanner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+}
+
+.bg-black
+{
+    background-color: black;
+}
+
+.contentlevel{
+display: flex;
+flex-direction: row;
+justify-content:center;
+margin-top: 40px;
+}
+
+.contentleveltext{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.groupcurses{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-course{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.text-card{
+    color: white;
+    border-bottom: 0;
+}
+
+.text-card-course{
+    color: black;
+    border-bottom: 0;
+    
+}
+
+.levelcourses{
+background-color: orangered;
+}
+
+.textCongratulacions{
+    font-family: sans-serif;
+    font-weight: bold;
+}

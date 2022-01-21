@@ -1,1 +1,111 @@
-<p>courses works!</p>
+<app-header></app-header>
+
+<div class="d-flex flex-column aling-contente-center">
+  <div class="d-flex flex-column bg-black mt-5 mx-5">
+    <div class="minibanner w-50 mt-3 ms-5">
+      <h1 class="text-white m-auto textCongratulacions">
+        Estas en el nivel: {{ infoUser?.namelevel }}
+      </h1>
+    </div>
+
+    <div class="level-group">
+      <a (click)="setLevel($event)" name="1" class="btn-level">
+        <img
+          src="assets/img/level/elfo.jpeg.png"
+          class="img-thumbnail img-size"
+          alt="..."
+        />
+        <h5 class="text-card my-3 text-light textCongratulacions">
+          Elfo ahorrador
+        </h5>
+      </a>
+
+      <a (click)="setLevel($event)" name="2" class="btn-level">
+        <img
+          src="assets/img/level/escudero.png"
+          class="card-img-top img-size"
+          alt="..."
+        />
+        <h5 class="text-card my-3 textCongratulacions">Escudero del dinero</h5>
+      </a>
+
+      <a (click)="setLevel($event)" name="3" class="btn-level">
+        <img
+          src="assets/img/level/caballero.png"
+          class="card-img-top img-size"
+          alt="..."
+        />
+        <h5 class="text-card my-3 textCongratulacions">Caballero del ahorro</h5>
+      </a>
+
+      <a (click)="setLevel($event)" name="4" class="btn-level">
+        <img
+          src="assets/img/level/mago.jpeg"
+          class="card-img-top img-size"
+          alt="..."
+        />
+        <h5 class="text-card my-3 textCongratulacions">Mago de las Finanzas</h5>
+      </a>
+
+      <a (click)="setLevel($event)" name="5" class="btn-level">
+        <img
+          src="assets/img/level/leyenda.png"
+          class="card-img-top img-size"
+          alt="..."
+        />
+        <h5 class="text-card my-3 textCongratulacions">
+          Leyenda de las Inversioines
+        </h5>
+      </a>
+    </div>
+  </div>
+
+  <div class="contentlevel mt-5">
+    <div class="contentleveltext">
+      <h2 class="w-50 text-break textCongratulacions">{{ contentLevel }}</h2>
+    </div>
+    <div class="d-flex flex-row justifi-content-center aling-content-center">
+      <img src="/assets/img/NC1.png" alt="" />
+    </div>
+  </div>
+
+  <div class="levelcourses mt-5 pt-5">
+    <div>
+      <h2 class="ms-5 textCongratulacions">Niveles del curso</h2>
+    </div>
+    <div class="groupcurses mx-5 mt-5">
+      <a class="btn-course">
+        <img
+          [src]="course01link"
+          class="card-img-top img-size-course"
+          alt="..."
+        />
+        <h5 class="text-card-course my-3 textCongratulacions">
+          {{ course01 }}
+        </h5>
+      </a>
+
+      <a class="btn-course">
+        <img
+          [src]="course02link"
+          class="card-img-top img-size-course"
+          alt="..."
+        />
+        <h5 class="text-card-course my-3 textCongratulacions">
+          {{ course02 }}
+        </h5>
+      </a>
+
+      <a class="btn-course">
+        <img
+          [src]="course03link"
+          class="card-img-top img-size-course"
+          alt="..."
+        />
+        <h5 class="text-card-course my-3 textCongratulacions">
+          {{ course03 }}
+        </h5>
+      </a>
+    </div>
+  </div>
+</div>
