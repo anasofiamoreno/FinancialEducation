@@ -8,3 +8,15 @@
   input[type="radio"]:checked + span {
     color: #f00;
   }
+
+  .title{
+    color: hsla(13, 100%, 54%, 1);
+  }
+
+  .sizeBox{
+    width: 70%;
+  }
+
+  .question1-img{
+width: 150px;
+  }
