@@ -3,8 +3,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { authState, user } from '@angular/fire/auth';
 import { Firestore, doc, setDoc } from '@angular/fire/firestore';
 import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
-import { animation } from '@angular/animations';
-
+import { ServicesService } from 'src/app/pages/services/services.service';
+import { isThisTypeNode } from 'typescript';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   password: string = '';
   passwordConfirm: string = '';
   sex: string | null = 'Sexo';
-  age: string | null = '';
+  age: number = 0;
   cp: string = '28986';
   sepomex: string = '';
   state: string = '';
@@ -24,14 +24,23 @@ export class RegisterComponent implements OnInit {
   study: string = 'Estudios';
   job: string = 'Ocupacion';
   passwordmessage: string = '';
-  levelgeded: string | null = '2';
+  levelgeded: number = 0;
   namelevel: string = '';
   animationR: boolean = false;
+
+  texts: string[] = [
+    'Si hoy perdieras tu empleo (obviamente deseamos que no pase); no podrías sobrevivir cómodamente por mucho tiempo. Pero no te preocupes, nosotros te daremos las bases para que alcances esa abundancia financiera que tanto necesitas y deseas.',
+    'En este punto el dinero no te causa estrés, cuentas con unos ahorritos que podrían sacarte de apuros (chiquitos, tampoco es como que tengas los millones guardados), pero puedes mejorar y accionar para alcanzar la abundancia financiera que tanto necesitas y deseas.',
+    'Estás a casi nada de alcanzar la abundancia financiera que anhelas, ya sabes que el ahorro no basta y has comenzado a tomar otras medidas básicas. Completa el conocimiento que ya tienes para que logres tu objetivo de alcanzar la libertad financiera.',
+    'Has alcanzado esa libertad financiera que tanto anhelabas, aunque hoy el trabajar sea una opción, aún te falta aprender a incrementar tus inversiones para cambiar esa libertad por Abundancia. Aquí te mostramos cómo lograrlo.',
+    '¡Por fin alcanzaste la abundancia Financiera con la que tanto soñabas y por la que tanto trabajaste! Hoy tienes ya un conocimiento amplio sobre finanzas, sabes poner a trabajar tu dinero y disfrutas ese nivel que tienes. No olvides que podemos charlar sobre temas financieros en el momento que lo decidas, estamos a un click de distancia.',
+  ];
 
   constructor(
     private http: HttpClient,
     private db: Firestore,
-    private auth: Auth
+    private auth: Auth,
+    private sercies: ServicesService
   ) {}
 
   createRequestOption() {
@@ -79,29 +88,30 @@ export class RegisterComponent implements OnInit {
       return alert('Datos Incompletos, revise correo y constraseña');
     }
 
+    if (
+      this.cp.length <= 4 ||
+      this.job == 'Ocupacion' ||
+      this.study == 'Estudios'
+    ) {
+      return alert('Datos Incompletos, CP, Ocupacion o Estudios');
+    }
+
     await createUserWithEmailAndPassword(this.auth, this.email, this.password)
       .then(async (userCredential) => {
         if (userCredential.user) {
-          await setDoc(
-            doc(
-              this.db,
-              'costumer',
-              this.email.slice(0, this.email.indexOf('@'))
-            ),
-            {
-              name: this.email.slice(0, this.email.indexOf('@')),
-              email: this.email,
-              age: this.age,
-              sex: this.sex,
-              cp: this.cp,
-              state: this.state,
-              city: this.city,
-              study: this.study,
-              job: this.job,
-              level: this.levelgeded,
-              namelevel: this.namelevel,
-            }
-          );
+          await setDoc(doc(this.db, 'costumer', this.email), {
+            name: this.sercies.userQuiz.name,
+            email: this.email,
+            age: this.age,
+            sex: this.sex,
+            cp: this.cp,
+            state: this.state,
+            city: this.city,
+            study: this.study,
+            job: this.job,
+            level: this.levelgeded,
+            namelevel: this.namelevel,
+          });
           localStorage.clear();
           window.location.href = '/courses';
         }
@@ -128,25 +138,27 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.name = localStorage.getItem('name');
-    this.levelgeded = localStorage.getItem('level');
-    this.age = localStorage.getItem('age');
-    this.sex = localStorage.getItem('gender');
+    //this.sercies.registerData('Ana Sofia', 34, 'Female', 4);
+
+    this.name = this.sercies.userQuiz.name;
+    this.levelgeded = this.sercies.userQuiz.level;
+    this.age = this.sercies.userQuiz.age;
+    this.sex = this.sercies.userQuiz.gender;
 
     switch (this.levelgeded) {
-      case '1':
+      case 1:
         this.namelevel = 'Elfo ahorrador';
         break;
-      case '2':
+      case 2:
         this.namelevel = 'Escudero del dinero';
         break;
-      case '3':
+      case 3:
         this.namelevel = 'Caballero del ahorro';
         break;
-      case '4':
+      case 4:
         this.namelevel = 'Mago de las finanzas';
         break;
-      case '5':
+      case 5:
         this.namelevel = 'Leyenda de las inversiones';
         break;
       default:

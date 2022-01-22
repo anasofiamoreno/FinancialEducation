@@ -3,4 +3,5 @@ export interface UserInfo {
   age?: string;
   level?: number;
   namelevel?: string;
+  sex?: string;
 }
