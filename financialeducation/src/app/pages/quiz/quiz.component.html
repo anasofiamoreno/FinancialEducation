@@ -1,185 +1,216 @@
 <app-header></app-header>
-<form  class=".container  m-5"
-   [formGroup]="formQuiz"
-   (ngSubmit)="score()"
-  
->
+<form class=".container  m-5" [formGroup]="formQuiz" (ngSubmit)="score()">
 
-  <h1 class="mb-5 title text-center">¿Eres un elfo ahorrador o ya eres una leyenda de las finanzas?</h1>
-<h3>Descubrelo con este divertido Quiz</h3>
-  
- <div id="question1" class=".container ">
-    <h5 class="mb-5 bg-dark p-4 text-white text-center">Selecciona todas las opciones de las que tengas conocimiento</h5>
-    
-    <div class="row ">
-      <div class="col-12 col-sm-3" >
+  <h1 class="mb-5 title text-center">¿Tus finanzas te tienen viviendo en modo zombie o será que ya vives como toda una
+    leyenda de las finanzas??</h1>
+  <h3>¡Descubre tu mood financiero en este corto y divertido Quiz!</h3>
+
+  <div id="question1" class=".container ">
+    <h5 class="mb-5 bg-dark p-4 text-white text-center">Selecciona todas las opciones de las que tengas conocimiento
+    </h5>
+
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12 col-sm-3">
         <div class="card mb-3" style="width: 18rem;">
-          <input type="checkbox" id="q1option1"  [value]=1 class="btn-check" formControlName="question1option1">
-          <label for="q1option1" class="btn btn-outline-danger"><img src="/assets/img/acciones.gif" class="card-img-top question1-img" alt="Fondos de inversion">
-           <p class="card-text">Acciones</p></label>
-       </div>
-       <div class="card mb-3" style="width: 18rem;">
-        <input type="checkbox" id="q1option2"  [value]=1 class="btn-check" formControlName="question1option2">
-        <label for="q1option2" class="btn btn-outline-danger"><img src="/assets/img/fondoInv2.gif" class="card-img-top question1-img" alt="Fondos de inversion"><p class="card-text">Fondos de inversión</p></label>
-      </div>
+          <input type="checkbox" id="q1option1" [value]=1 class="btn-check" formControlName="question1option1">
+          <label for="q1option1" class="btn btn-outline-danger"><img src="/assets/img/acciones.gif"
+              class="card-img-top question1-img" alt="Fondos de inversion">
+            <p class="card-text">Acciones</p>
+          </label>
+        </div>
+        <div class="card mb-3"  style="width: 18rem;">
+          <input type="checkbox" id="q1option2" [value]=1 class="btn-check" formControlName="question1option2">
+          <label for="q1option2" class="btn btn-outline-danger"><img src="/assets/img/fondoInv2.gif"
+              class="card-img-top question1-img" alt="Fondos de inversion">
+            <p class="card-text">Fondos de inversión</p>
+          </label>
+        </div>
 
       </div>
-      <div class="col-12 col-sm-3" >
-          <div class="card mb-3" style="width: 18rem;">
-            <input type="checkbox" id="q1option3" [value]=1 class="btn-check" formControlName="question1option3">
-            <label for="q1option3" class="btn btn-outline-danger"><img src="/assets/img/crypto2.gif" class="card-img-top question1-img" alt="Crypto"><p class="card-text">Crypto</p></label>
-          </div>  
-          
-          <div class="card mb-3" style="width: 18rem;  ">
-            <input type="checkbox" id="q1option4"  [value]=1 class="btn-check" formControlName="question1option4">
-              <label for="q1option4" class="btn btn-outline-danger"><img src="/assets/img/tipoCambio.gif"  class="card-img-top question1-img" alt="Tipo-de-cambio"><p class="card-text">Tipo de cambio</p></label>
-          </div>
+      <div class="col-12 col-sm-3">
+        <div class="card mb-3" style="width: 18rem;">
+          <input type="checkbox" id="q1option3" [value]=1 class="btn-check" formControlName="question1option3">
+          <label for="q1option3" class="btn btn-outline-danger"><img src="/assets/img/crypto2.gif"
+              class="card-img-top question1-img" alt="Crypto">
+            <p class="card-text">Crypto</p>
+          </label>
+        </div>
+
+        <div class="card mb-3" style="width: 18rem;  ">
+          <input type="checkbox" id="q1option4" [value]=1 class="btn-check" formControlName="question1option4">
+          <label for="q1option4" class="btn btn-outline-danger"><img src="/assets/img/tipoCambio.gif"
+              class="card-img-top question1-img" alt="Tipo-de-cambio">
+            <p class="card-text">Tipo de cambio</p>
+          </label>
+        </div>
       </div>
 
       <div class="col-12 col-sm-3">
         <div class="card mb-3" style="width: 18rem;">
-          <input type="checkbox" id="q1option5" class="btn-check"  formControlName="question1option5">
-            <label for="q1option5" class="btn btn-outline-danger"><img src="/assets/img/cetes2.gif" class="card-img-top question1-img" alt="Cetes"><p class="card-text">Cetes</p></label>
+          <input type="checkbox" id="q1option5" class="btn-check" formControlName="question1option5">
+          <label for="q1option5" class="btn btn-outline-danger"><img src="/assets/img/cetes2.gif"
+              class="card-img-top question1-img" alt="Cetes">
+            <p class="card-text">Cetes</p>
+          </label>
         </div>
 
         <div class="card mb-3" style="width: 18rem;">
-          <input type="checkbox" id="q1option6" class="btn-check"  formControlName="question1option6">
-            <label for="q1option6" class="btn btn-outline-danger"><img src="/assets/img/bonos.gif"  class="card-img-top question1-img" alt="Bonos"><p class="card-text">Bonos</p></label>
+          <input type="checkbox" id="q1option6" class="btn-check" formControlName="question1option6">
+          <label for="q1option6" class="btn btn-outline-danger"><img src="/assets/img/bonos.gif"
+              class="card-img-top question1-img" alt="Bonos">
+            <p class="card-text">Bonos</p>
+          </label>
         </div>
       </div>
- 
-   </div>
+
+    </div>
   </div>
 
   <div id="question2" class="mb-5 mt-5">
-    <h5 class="mb-5 bg-dark p-4 text-white text-center">¿Qué tan confiado de tus conocimientos financieros te sientes al tomar decisiones de inversión?</h5>
+    <h5 class="mb-5 bg-dark p-4 text-white text-center">¿Qué tan confiado de tus conocimientos financieros te sientes al
+      tomar decisiones de inversión?</h5>
     <div class="d-flex flex-row justify-content-between">
       <img src="/assets/img/crying.gif">
       <img src="/assets/img/digilah-digifun.gif">
     </div>
     <div class="custom-slider d-flex justify-content-center">
-    <ngx-slider [(value)]="value" [options]="options" formControlName="question2"></ngx-slider>
+      <ngx-slider [(value)]="value" [options]="options" formControlName="question2"></ngx-slider>
     </div>
   </div>
 
   <div id="question3" class="mb-5 mt-5">
-    <h5 class="mb-5 bg-dark p-4 text-white text-center"> De las siguientes oraciones selecciona las que consideres verdaderas </h5>
+    <h5 class="mb-5 bg-dark p-4 text-white text-center"> De las siguientes oraciones selecciona las que consideres
+      verdaderas </h5>
     <img class="rounded mx-auto d-block" src="/assets/img/question3.gif">
-    <div class=" sizeBox d-flex flex-column justify-content-center">
-    <input type="checkbox" class="btn-check" id="q2option1"  ([value])=true
-     formControlName="q3option1">
-    <label for="q2option1" class="btn btn-outline-dark"> Entre más diversificado un portafolio, más rendimientos puedes esperar 
-    </label><br>
+    <div class=" sizeBox d-flex flex-column justify-content-center col-lg-10 ">
+      <input type="checkbox" class="btn-check" id="q2option1" ([value])=true formControlName="q3option1">
+      <label for="q2option1" class="btn btn-outline-dark"> Entre más diversificado un portafolio, más rendimientos
+        puedes esperar
+      </label><br>
 
-    <input type="checkbox" class="btn-check" id="q2option2" ([value])=true
-     formControlName="q3option2">
-    <label for="q2option2" class="btn btn-outline-dark"> Mayor diversificación es sinónimo de mayor seguridad en tus inversiones </label><br>
+      <input type="checkbox" class="btn-check mb-3" id="q2option2" ([value])=true formControlName="q3option2">
+      <label for="q2option2" class="btn btn-outline-dark"> Mayor diversificación es sinónimo de mayor seguridad en tus
+        inversiones </label><br>
 
-    <input type="checkbox" class="btn-check" id="q2option3"  ([value])=false
-      >
-    <label for="q2option3" class="btn btn-outline-dark" > Entre más tipos de instrumentos financieros en tu portafolio menor será tu diversificación</label><br>
+      <input type="checkbox" class="btn-check" id="q2option3" ([value])=false>
+      <label for="q2option3" class="btn btn-outline-dark"> Entre más tipos de instrumentos financieros en tu portafolio
+        menor será tu diversificación</label><br>
 
-    <input type="checkbox" class="btn-check" id="q2option4"  ([value])=false
-    >
-    <label for="q2option4" class="btn btn-outline-dark"> Un portafolio diversificado siempre es preferible a uno no diversificado sin importar el tipo de inversionista
-    </label><br>
-  </div>
+      <input type="checkbox" class="btn-check" id="q2option4" ([value])=false>
+      <label for="q2option4" class="btn btn-outline-dark"> Un portafolio diversificado siempre es preferible a uno no
+        diversificado sin importar el tipo de inversionista
+      </label><br>
+    </div>
   </div>
 
   <div id="question4" class="mb-3">
-    <h5 class="mb-5 bg-dark p-4 text-white text-center">  Marca cada una de las siguientes afirmaciones  </h5>
+    <h5 class="mb-5 bg-dark p-4 text-white text-center"> Marca cada una de las siguientes afirmaciones </h5>
 
     <div class="input-group" style="width: 18rem;">
-      <p id="q4option1" >Me da rendimientos</p>
+      <p id="q4option1">Me da rendimientos</p>
       <input type="radio" id="ahorro" name="question4subquestion1" value=0>
       <input type="radio" id="inversion" formControlName="q4option1" value=1>
     </div>
 
-    <div class="input-group"style="width: 18rem;">
+    <div class="input-group" style="width: 18rem;">
       <p id="q4option2">Es la opción más líquida</p>
       <input type="radio" id="ahorro" formControlName="q4option2" value=1>
       <input type="radio" id="inversion" name="question4subquestion2" value=0>
     </div>
 
     <div class="input-group" style="width: 18rem;">
-      <p id="q4option3" >Me producirá más dinero en el futuro</p>
+      <p id="q4option3">Me producirá más dinero en el futuro</p>
       <input type="radio" id="ahorro" name="question4subquestion3" value=0>
       <input type="radio" id="inversion" formControlName="q4option3" value=1>
     </div>
 
     <div class="input-group" style="width: 18rem;">
       <p id="q4option4">Me protege contra la inflación</p>
-      <input  type="radio" id="question4-1-1" name="q4option4" value=0 (change)="changeStatus1($event)">
-      <label for="question4-1-1" class="btn btn-outline-dark"> 
+      <input type="radio" id="question4-1-1" name="q4option4" value=0 (change)="changeStatus1($event)">
+      <label for="question4-1-1" class="btn btn-outline-dark">
         <img src="/assets/img/intentarlo.gif">
       </label><br>
-      <input type="radio" id="record" name="q4option4" formControlName="q4option4" value=1  (change)="changeStatus($event)">
-      <label for="question4-1-2" class="btn btn-outline-dark"> 
+      <input type="radio" id="record" name="q4option4" formControlName="q4option4" value=1
+        (change)="changeStatus($event)">
+      <label for="question4-1-2" class="btn btn-outline-dark">
         <div *ngIf="event"><img src="/assets/img/casa.gif"></div>
-       
+
       </label><br>
     </div>
 
   </div>
 
-  <div id="question5" class="mb-3"> 
+  <div id="question5" class="mb-3">
     <h5 class="mb-5 bg-dark p-4 text-white text-center">¿Por qué quieres aprender sobre finanzas?</h5>
     <div class="d-flex  justify-content-center">
-       <div class="card mb-3 m-5" style="width: 18rem;">
-         <input type="checkbox" id="q5option1" formControlName="question5option1" value=1 class="btn-check">
-         <label for="q5option1" class="btn btn-outline-dark"><img src="/assets/img/controlFinanciero.gif" class="card-img-top" alt="Acciones"><p class="card-text">Quiero tomar las riendas de mi futuro financiero</p></label>  
-       </div>
-
-       <div class="card mb-3 m-5" style="width: 18rem;">
-         <input type="checkbox" id="q5option2" formControlName="question5option2" value=1 class="btn-check">
-         <label for="q5option2" class="btn btn-outline-dark"><img src="/assets/img/casa.gif" class="card-img-top" alt="Acciones"><p class="card-text">Quiero comprar una casa</p></label>  
-       </div>
-
-       <div class="card mb-3 m-5" style="width: 18rem;">
-         <input type="checkbox" id="q5option3" formControlName="question5option3" value=1 class="btn-check">
-         <label for="q5option3" class="btn btn-outline-dark"><img src="/assets/img/question5-1.gif" class="card-img-top" alt="Acciones"><p class="card-text">Tengo un objetivo en mente al que quiero llegar</p></label>  
-       </div>
-
-       <div class="card mb-3 m-5" style="width: 18rem;">
-         <input type="checkbox" id="q5option4" formControlName="question5option4" value=1 class="btn-check">
-         <label for="q5option4" class="btn btn-outline-dark"><img src="/assets/img/concimiento.gif" class="card-img-top" alt="Acciones"><p class="card-text">Quiero expandir mis conocimientos</p></label>  
-       </div>
-
-       <div class="card mb-3 m-5" style="width: 18rem;">
-        <input type="checkbox" id="q5option5" formControlName="question5option5" value=1 class="btn-check">
-        <label for="q5option5" class="btn btn-outline-dark"><img src="/assets/img/intentarlo.gif" class="card-img-top" alt="Acciones"><p class="card-text">Conozco gente que ha comenzado a invertir y quiero intentarlo</p></label>  
+      <div class="card mb-3 m-5" style="width: 18rem;">
+        <input type="checkbox" id="q5option1" formControlName="question5option1" value=1 class="btn-check">
+        <label for="q5option1" class="btn btn-outline-dark"><img src="/assets/img/controlFinanciero.gif"
+            class="card-img-top" alt="Acciones">
+          <p class="card-text">Quiero tomar las riendas de mi futuro financiero</p>
+        </label>
       </div>
-  </div> 
-</div>
- <div id="question5" class="mb-3">
-    <h5 class="mb-5 bg-dark p-4 text-white text-center">Ingresa los siguientes datos para recibir tu plan de educación financiera de manera personalizada</h5>
+
+      <div class="card mb-3 m-5" style="width: 18rem;">
+        <input type="checkbox" id="q5option2" formControlName="question5option2" value=1 class="btn-check">
+        <label for="q5option2" class="btn btn-outline-dark"><img src="/assets/img/casa.gif" class="card-img-top"
+            alt="Acciones">
+          <p class="card-text">Quiero comprar una casa</p>
+        </label>
+      </div>
+
+      <div class="card mb-3 m-5" style="width: 18rem;">
+        <input type="checkbox" id="q5option3" formControlName="question5option3" value=1 class="btn-check">
+        <label for="q5option3" class="btn btn-outline-dark"><img src="/assets/img/question5-1.gif" class="card-img-top"
+            alt="Acciones">
+          <p class="card-text">Tengo un objetivo en mente al que quiero llegar</p>
+        </label>
+      </div>
+
+      <div class="card mb-3 m-5" style="width: 18rem;">
+        <input type="checkbox" id="q5option4" formControlName="question5option4" value=1 class="btn-check">
+        <label for="q5option4" class="btn btn-outline-dark"><img src="/assets/img/concimiento.gif" class="card-img-top"
+            alt="Acciones">
+          <p class="card-text">Quiero expandir mis conocimientos</p>
+        </label>
+      </div>
+
+      <div class="card mb-3 m-5" style="width: 18rem;">
+        <input type="checkbox" id="q5option5" formControlName="question5option5" value=1 class="btn-check">
+        <label for="q5option5" class="btn btn-outline-dark"><img src="/assets/img/intentarlo.gif" class="card-img-top"
+            alt="Acciones">
+          <p class="card-text">Conozco gente que ha comenzado a invertir y quiero intentarlo</p>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div id="question5" class="mb-3">
+    <h5 class="mb-5 bg-dark p-4 text-white text-center">Ingresa los siguientes datos para recibir tu plan de educación
+      financiera de manera personalizada</h5>
     <div class="row g-2">
       <div class="col-md">
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputGrid" placeholder="Nombre" formControlName="name" >
+          <input type="text" class="form-control" id="floatingInputGrid" placeholder="Nombre" formControlName="name">
           <label for="floatingInputGrid">Nombre</label>
         </div>
       </div>
       <div class="col-md">
         <div class="form-floating">
-          <input type="number" class="form-control" id="floatingInputGrid" placeholder="Edad" formControlName="age" >
+          <input type="number" class="form-control" id="floatingInputGrid" placeholder="Edad" formControlName="age">
           <label for="floatingInputGrid">Edad</label>
         </div>
       </div>
       <div class="col-md">
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputGrid" placeholder="Genero" formControlName="gender" >
+          <input type="text" class="form-control" id="floatingInputGrid" placeholder="Genero" formControlName="gender">
           <label for="floatingInputGrid">Genero</label>
         </div>
       </div>
     </div>
-    
+
   </div>
-    
+
 
 
   <button type="submit" class="btn btn-primary" [disabled]="formQuiz.invalid">Submit</button>
 </form>
-
-
-
