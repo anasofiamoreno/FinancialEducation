@@ -38,16 +38,13 @@ export class LoginComponent implements OnInit {
       const {email, password} = this.formLogin.value;
        this.authService.login(email,password)
        .then ( resp => {
-             console.log(resp)
-            
               this.user = {
                 email:resp.user.email!,
               }
               this.authService._user=this.user
-              console.log(this.user)
               localStorage.setItem('user',JSON.stringify(this.authService.user) );
               this.router.navigateByUrl('/courses')
-             
+             this.closeModal('dismiss')
             
             
           })
@@ -68,9 +65,13 @@ export class LoginComponent implements OnInit {
           const credential = GoogleAuthProvider.credentialFromResult(result)
           const token = credential?.accessToken
           const user = result.user;
-          console.log(user.email);
+          this.user = {
+            email:user.email!,
+          }
+          this.authService._user=this.user
           localStorage.setItem('user',JSON.stringify(this.authService.user) );
           this.router.navigateByUrl('/courses')
+          this.closeModal('dismiss')
         }).catch((error) => {
           Swal.fire({
             title: 'Error!',
