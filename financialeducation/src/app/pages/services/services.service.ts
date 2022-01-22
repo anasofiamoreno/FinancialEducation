@@ -7,28 +7,20 @@ import { UserQuiz } from '../interfaces';
 export class ServicesService {
 private _userQuiz!:UserQuiz
 
+get userQuiz(){
+  return this._userQuiz
+}
 
   constructor() { }
 
   registerData(name:string, age:number, gender:string, score:number){
-   console.log(score)
+    
    this._userQuiz={
     name:name,
     age:age,
     gender:gender,
-    level:'Elfo ahorrador'
+    level:score
   }
-   switch (true) {
-    case  score > 1 && score < 3:
-       this._userQuiz.level = "Elfo ahorrador"
-        break;
-    case score > 0 && score < 10:
-        console.log("Result: 5");
-        break;
-    case score > 0 && score < 10:
-        console.log("Result: 10");
-        break;
-}
    
   }
 }
