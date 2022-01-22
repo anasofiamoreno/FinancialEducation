@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginComponent } from '../../auth/login/login.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { LoginComponent } from '../../auth/login/login.component';
 
 @Component({
   selector: 'app-header',

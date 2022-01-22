@@ -8,15 +8,19 @@
 
 .level-group{
     display: flex;
-    height: 400px;
+    /* height: 400px; */
     background-color: black;
     align-items: center;
-    justify-content: space-between;
-    margin: auto;
+    justify-content: space-around;
+
+    overflow: hidden;
 }
 
 .img-size{
     width: 80%;
+    transition-duration: .5s;
+    border: white;
+    border-width: 30px;
 }
 
 .img-size-course{
@@ -24,8 +28,7 @@
 }
 
 .img-size:hover{
-    width: 350px;
-    height: 350px;
+    scale: 1.2;
 }
 
 .btn-level{
@@ -95,4 +98,17 @@ background-color: orangered;
 .textCongratulacions{
     font-family: sans-serif;
     font-weight: bold;
+}
+
+.disabledbutton{
+    pointer-events: fill;
+    opacity: 0.4;
+}
+
+.ffs{
+ width: 350px;
+}
+
+.text-orange{
+    color: orangered;
 }
