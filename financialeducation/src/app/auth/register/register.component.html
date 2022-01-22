@@ -1,4 +1,4 @@
-<div class="bg-dark banner">
+<div class="banner">
   <img
     class="ms-5"
     src="https://www.blackrock.com/authplatform/assets/images/blackrock-logo-nav-white-990c18f15fbb94ab8a519fc2ac37fe43.png"
@@ -6,26 +6,37 @@
   />
 </div>
 
-<div class="menuConcretulatioins md-5">
-  <div class="column">
-    <h1 class="textCongratulacions">¡Felicidades!</h1>
-    <h1 class="textCongratulacions h2">&lt;&nbsp;{{ name }}&nbsp;&gt;</h1>
-    <p class="textCongratulacions text-center">
-      Has dado un paso importante en tu camino de inversionista.
-    </p>
-    <p class="text-center textCongratulacions">
-      Eres todo un
-      <span class="text-danger">{{ namelevel }}</span>
-    </p>
-    <p class="textCongratulacions text-center">
-      ¡Te deseamos éxito en este nuevo aprendizaje!
-    </p>
+<div class="menuConcretulatioins">
+  <div class="column w-50">
+    <div class="column w-75">
+      <h1 class="textCongratulacions text-orange">¡Felicidades!</h1>
+      <h1 class="textCongratulacions h2 text-white">
+        &lt;&nbsp;{{ name }}&nbsp;&gt;
+      </h1>
+      <p class="textCongratulacions text-center text-white">
+        Has dado un paso importante en tu camino de inversionista.
+      </p>
+      <div class="stars">
+        <div class="showstar" [ngClass]="{ hidestar: animationR }"></div>
+      </div>
+      <p class="text-center textCongratulacions text-white">
+        En este momento te encuentras en el Nivel
+        <span class="text-danger">{{ namelevel }}</span>
+      </p>
+      <p class="text-center textCongratulacions text-white text-wrap">
+        pero no te preocupes, nuestra misión es que te conviertas en una
+        “Leyenda de las Inversiones” siguiendo el plan que hemos creado para ti.
+      </p>
+      <p class="textCongratulacions text-center text-white">
+        ¡Te deseamos éxito en este nuevo aprendizaje!
+      </p>
+    </div>
   </div>
 
-  <div class="menuregister mx-5 d-grid gap-3">
+  <div class="menuregister px-5 gap-3 w-50">
     <div class="mt-3 d-flex justify-content-center">
-      <h3 class="textCongratulacions h4 text-center">
-        Registrate para Continuar
+      <h3 class="textCongratulacions fs-1 text-center text-orange">
+        Registrate ahora para visualizar el contenido de BlackRock
       </h3>
     </div>
 
@@ -123,8 +134,12 @@
     </div> -->
 
     <div class="mb-3 d-flex justify-content-center">
-      <button class="btn btn_continue" (click)="sendForm()">Continuar</button>
+      <button class="btn btn_continue w-25" (click)="sendForm()">
+        Continuar
+      </button>
     </div>
   </div>
+  <audio autoplay src="assets/audio/fan.mp3" type="audio/mp3">
+    Your browser does not support the <code>audio</code> element.
+  </audio>
 </div>
-<hr />
