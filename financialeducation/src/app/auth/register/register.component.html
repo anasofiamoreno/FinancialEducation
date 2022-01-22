@@ -9,12 +9,13 @@
 <div class="menuConcretulatioins md-5">
   <div class="column">
     <h1 class="textCongratulacions">¡Felicidades!</h1>
+    <h1 class="textCongratulacions h2">&lt;&nbsp;{{ name }}&nbsp;&gt;</h1>
     <p class="textCongratulacions text-center">
       Has dado un paso importante en tu camino de inversionista.
     </p>
     <p class="text-center textCongratulacions">
       Eres todo un
-      <span>{{ namelevel }}</span>
+      <span class="text-danger">{{ namelevel }}</span>
     </p>
     <p class="textCongratulacions text-center">
       ¡Te deseamos éxito en este nuevo aprendizaje!
@@ -52,7 +53,7 @@
       <input
         class="w-100"
         type="password"
-        placeholder="Repete contraseña"
+        placeholder="Repite la contraseña"
         [(ngModel)]="passwordConfirm"
         (input)="checkPassword($event)"
       />
