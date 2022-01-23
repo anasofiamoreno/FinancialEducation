@@ -3,6 +3,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { authState, user } from '@angular/fire/auth';
 import { Firestore, doc, setDoc } from '@angular/fire/firestore';
 import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { ServicesService } from 'src/app/pages/services/services.service';
 import { isThisTypeNode } from 'typescript';
 @Component({
@@ -40,7 +42,8 @@ export class RegisterComponent implements OnInit {
     private http: HttpClient,
     private db: Firestore,
     private auth: Auth,
-    private sercies: ServicesService
+    private sercies: ServicesService,
+    private activeModal:NgbActiveModal
   ) {}
 
   createRequestOption() {
@@ -140,6 +143,8 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
+
+  
 
   ngOnInit(): void {
     this.sercies.registerData('Ana Sofia', 34, 'Female', 4);
