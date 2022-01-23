@@ -41,11 +41,8 @@ export class EdituserinfoComponent implements OnInit {
     const items = document.querySelectorAll(".editing")
     items.forEach(item => {
    
-     
-
         item.removeAttribute("readonly")
-        item.setAttribute("style", "border-width: medium; border-color: blue; border-radius: 15px;")
-      
+        item.setAttribute("style", "border-width: 2px; border-style: solid;")
       
     });
 
@@ -58,7 +55,7 @@ export class EdituserinfoComponent implements OnInit {
     const items = document.querySelectorAll(".editing")
     items.forEach(item => {
       item.setAttribute("readonly", "")
-      item.setAttribute("style", "background: white")
+      item.setAttribute("style", "background: white; border-botton: none")
         
     });
 
