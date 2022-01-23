@@ -30,7 +30,7 @@ export class CoursesComponent implements OnInit {
 
   level01content: string[] = [
     'Elfo Ahorrador',
-    'En este curso Aprenderas lo basico sobre la inverion y cuales son su diferencias con respecto al ahorro.',
+    'Si hoy perdieras tu empleo (obviamente deseamos que no pase); no podrías sobrevivir cómodamente por mucho tiempo. Pero no te preocupes, nosotros te daremos las bases para que alcances esa abundancia financiera que tanto necesitas y deseas.',
   ];
   level02content: string[] = [
     'Escudero del Dinero',
