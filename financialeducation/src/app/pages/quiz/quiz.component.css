@@ -24,3 +24,12 @@
     font-size: x-large;
     font-family: 'Noto Sans';
   }
+
+  p.card-text{
+    font-family: 'Noto Sans';
+    font-size: small;
+  }
+
+  h5{
+    font-family: 'Noto Sans';
+  }

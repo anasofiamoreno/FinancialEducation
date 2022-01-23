@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 
 img {
-  width: 50vw;
+  width: 30vw;
   height: auto;
 }
 .navbar .navbar-toggler-icon {
@@ -30,5 +30,5 @@ nav {
   border: none;
 }
 .button-1:hover {
-  background-color: #FFCE00;
+  background-color: #545454;
 }

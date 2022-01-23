@@ -4,13 +4,13 @@
   <h1 class="mb-5 title text-center">¿Tus finanzas te tienen viviendo en modo zombie o será que ya vives como toda una
     leyenda de las finanzas??</h1>
   <h3>¡Descubre tu mood financiero en este corto y divertido Quiz!</h3>
-
+  <!-- Pregunta 1 con respuestas -->
   <div id="question1" class=".container ">
     <h5 class="mb-5 bg-dark p-4 text-white text-center">Selecciona todas las opciones de las que tengas conocimiento
     </h5>
 
     <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-12 col-sm-3">
+      <div class="col-11 col-sm-3">
         <div class="card mb-3" style="width: 18rem;">
           <input type="checkbox" id="q1option1" [value]=1 class="btn-check" formControlName="question1option1">
           <label for="q1option1" class="btn btn-outline-danger"><img src="/assets/img/acciones.gif"
@@ -18,7 +18,7 @@
             <p class="card-text">Acciones</p>
           </label>
         </div>
-        <div class="card mb-3"  style="width: 18rem;">
+        <div class="card mb-3" style="width: 18rem;">
           <input type="checkbox" id="q1option2" [value]=1 class="btn-check" formControlName="question1option2">
           <label for="q1option2" class="btn btn-outline-danger"><img src="/assets/img/fondoInv2.gif"
               class="card-img-top question1-img" alt="Fondos de inversion">
@@ -66,7 +66,8 @@
     </div>
   </div>
 
-  <div id="question2" class="mb-5 mt-5">
+  <!-- Pregunta 2 con respuestas -->
+  <div id="question2" class="col-11 mb-5 mt-5">
     <h5 class="mb-5 bg-dark p-4 text-white text-center">¿Qué tan confiado de tus conocimientos financieros te sientes al
       tomar decisiones de inversión?</h5>
     <div class="d-flex flex-row justify-content-between">
@@ -103,7 +104,8 @@
     </div>
   </div>
 
-  <div id="question4" class="mb-3">
+  <!-- Pregunta 4 con respuestas -->
+  <div id="question4" class="col-11 mb-3">
     <h5 class="mb-5 bg-dark p-4 text-white text-center"> Marca cada una de las siguientes afirmaciones </h5>
 
     <div class="input-group" style="width: 18rem;">
@@ -139,51 +141,53 @@
     </div>
 
   </div>
-
+  <!-- Pregunta 5 con respuestas -->
   <div id="question5" class="mb-3">
     <h5 class="mb-5 bg-dark p-4 text-white text-center">¿Por qué quieres aprender sobre finanzas?</h5>
+
     <div class="d-flex  justify-content-center">
-      <div class="card mb-3 m-5" style="width: 18rem;">
+      <div class="card mb-5 m-5" style="width: 18rem;">
         <input type="checkbox" id="q5option1" formControlName="question5option1" value=1 class="btn-check">
         <label for="q5option1" class="btn btn-outline-dark"><img src="/assets/img/controlFinanciero.gif"
             class="card-img-top" alt="Acciones">
-          <p class="card-text">Quiero tomar las riendas de mi futuro financiero</p>
+          <p class="card-text mt-3">Quiero tomar las riendas de mi futuro financiero</p>
         </label>
       </div>
 
-      <div class="card mb-3 m-5" style="width: 18rem;">
+      <div class="card mb-5 m-5" style="width: 18rem;">
         <input type="checkbox" id="q5option2" formControlName="question5option2" value=1 class="btn-check">
-        <label for="q5option2" class="btn btn-outline-dark"><img src="/assets/img/casa.gif" class="card-img-top"
+        <label for="q5option2" class="btn btn-outline-dark"><img src="/assets/img/casa.gif" class="card-img-top my-2"
             alt="Acciones">
-          <p class="card-text">Quiero comprar una casa</p>
+          <p class="card-text mt-3">Quiero comprar una casa</p>
         </label>
       </div>
 
-      <div class="card mb-3 m-5" style="width: 18rem;">
+      <div class="card mb-5 m-5" style="width: 18rem;">
         <input type="checkbox" id="q5option3" formControlName="question5option3" value=1 class="btn-check">
-        <label for="q5option3" class="btn btn-outline-dark"><img src="/assets/img/question5-1.gif" class="card-img-top"
+        <label for="q5option3" class="btn btn-outline-dark"><img src="/assets/img/question5-1.gif" class="card-img-top my-2"
             alt="Acciones">
           <p class="card-text">Tengo un objetivo en mente al que quiero llegar</p>
         </label>
       </div>
 
-      <div class="card mb-3 m-5" style="width: 18rem;">
+      <div class="card mb-6 m-5" style="width: 18rem;">
         <input type="checkbox" id="q5option4" formControlName="question5option4" value=1 class="btn-check">
-        <label for="q5option4" class="btn btn-outline-dark"><img src="/assets/img/concimiento.gif" class="card-img-top"
+        <label for="q5option4" class="btn btn-outline-dark"><img src="/assets/img/concimiento.gif" class="card-img-top my-2"
             alt="Acciones">
-          <p class="card-text">Quiero expandir mis conocimientos</p>
+          <p class="card-text mt-3">Quiero expandir mis conocimientos</p>
         </label>
       </div>
 
-      <div class="card mb-3 m-5" style="width: 18rem;">
+      <div class="card mb-6 m-5" style="width: 18rem;">
         <input type="checkbox" id="q5option5" formControlName="question5option5" value=1 class="btn-check">
         <label for="q5option5" class="btn btn-outline-dark"><img src="/assets/img/intentarlo.gif" class="card-img-top"
             alt="Acciones">
-          <p class="card-text">Conozco gente que ha comenzado a invertir y quiero intentarlo</p>
+          <p class="card-text mt-2">Conozco gente que ha comenzado a invertir y quiero intentarlo</p>
         </label>
       </div>
     </div>
   </div>
+  <!-- Datos personales en quiz -->
   <div id="question5" class="mb-3">
     <h5 class="mb-5 bg-dark p-4 text-white text-center">Ingresa los siguientes datos para recibir tu plan de educación
       financiera de manera personalizada</h5>
