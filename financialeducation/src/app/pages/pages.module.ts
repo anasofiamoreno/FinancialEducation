@@ -35,6 +35,7 @@ const ngWizardConfig: NgWizardConfig = {
     CommonModule,
     NgxSliderModule,
     ReactiveFormsModule,
+    NgWizardModule
 
     
   ],
