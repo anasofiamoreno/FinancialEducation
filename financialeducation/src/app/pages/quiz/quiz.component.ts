@@ -66,6 +66,7 @@ export class QuizComponent implements OnInit {
     });
 
     this.servicePage.registerData(name, age, gender, score.length);
+    this.openModal();
   }
 
   value: number = 5;
