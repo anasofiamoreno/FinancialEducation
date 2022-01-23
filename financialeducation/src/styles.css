@@ -8,11 +8,11 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.modal-content {
+/* .modal-content {
     border: none;
     border-radius: 0;
     width: 380px;
-}
+} */
 
 .custom-slider .ngx-slider {
         

@@ -13,7 +13,7 @@
     
     <div class="lineofdata">
       <p class="mb-0 mx-3">Nombre</p>
-      <input class="mx-3 editing" type="text" [value]="name" readonly />
+      <input class="mx-3 editing" type="text" name="nameuser" [(ngModel)]="name" readonly />
     </div>
     <div class="lineofdata">
       <p class="mb-0 mx-3">Correo Electronico</p>
@@ -21,15 +21,15 @@
     </div>
     <div class="lineofdata">
       <p class="mb-0 mx-3">Ocupacion</p>
-      <input class="mx-3 editing" type="text" [value]="job" readonly/>
+      <input class="mx-3 editing" type="text" name="jovuser" [(ngModel)]="job" readonly/>
     </div>
     <div class="lineofdata">
       <p class="mb-0 mx-3">Estado</p>
-      <input class="mx-3 editing" type="text" [value]="state" readonly/>
+      <input class="mx-3 editing" type="text" name="stateuser" [(ngModel)]="state" readonly/>
     </div>
     <div class="lineofdata">
       <p class="mb-0 mx-3">Ciudad</p>
-      <input class="mx-3 editing" type="text" [value]="city" readonly/>
+      <input class="mx-3 editing" type="text" name="cityuser" [(ngModel)]="city" readonly/>
     </div>
   </div>
   <div>

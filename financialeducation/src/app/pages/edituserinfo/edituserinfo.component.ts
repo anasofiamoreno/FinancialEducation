@@ -3,8 +3,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesAuth } from 'src/app/auth/services/services.Auth';
 import { InfoService } from '../services/info.service';
 import { Auth, signOut} from '@angular/fire/auth';
-import { Firestore } from '@angular/fire/firestore';
-//import { Firestore, setDoc, updateDoc } from 'firebase/firestore';
+import { Firestore, updateDoc, doc, getDoc } from '@angular/fire/firestore';
+import { ServicesService } from '../services/services.service';
 
 @Component({
   selector: 'app-edituserinfo',
@@ -13,14 +13,14 @@ import { Firestore } from '@angular/fire/firestore';
 })
 export class EdituserinfoComponent implements OnInit {
 
-  name: string | undefined = ""
-  email: string | undefined = ""
+  name: string  = ""
+  email: string = ""
   state: string | undefined = ""
   city: string | undefined = ""
   job: string | undefined = ""
   editing : boolean = false
 
-  constructor(private modalService: NgbModal, private infoService: InfoService,  private auth: Auth, private db:Firestore) { }
+  constructor(private modalService: NgbModal, private infoService: InfoService,  private auth: Auth, private db:Firestore, private servicePage: ServicesService) { }
 
   closeS(){
     signOut(this.auth)
@@ -42,14 +42,32 @@ export class EdituserinfoComponent implements OnInit {
     items.forEach(item => {
    
         item.removeAttribute("readonly")
-        item.setAttribute("style", "border-width: 2px; border-style: solid;")
+        item.setAttribute("style", "border-width: 2px; border-bottom-style: solid;")
       
     });
 
   }
 
-  saveData(){
-    console.log("save")
+  async saveData(){
+    console.log("save", this.email)
+
+    await updateDoc(doc(this.db, "costumer", this.email),{
+      name: this.name,
+      city: this.city,
+      state: this.state,
+      job: this.job
+
+    })
+
+    const infoUser = await (
+      await getDoc(doc(this.db, 'costumer', "test1@test.com"))
+    ).data();
+
+    this.infoService.userInfo = infoUser
+
+    
+
+
     this.editing = !this.editing
 
     const items = document.querySelectorAll(".editing")
@@ -64,8 +82,8 @@ export class EdituserinfoComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.name = this.infoService.userInfo?.name
-    this.email = this.infoService.userInfo?.email
+    this.name = typeof this.infoService.userInfo?.name == "string" ? this.infoService.userInfo?.name : ""
+    this.email = typeof this.infoService.userInfo?.email == "string" ? this.infoService.userInfo?.email : ""
     this.state = this.infoService.userInfo?.state
     this.city = this.infoService.userInfo?.city
     this.job = this.infoService.userInfo?.job
