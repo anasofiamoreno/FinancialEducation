@@ -1,0 +1,47 @@
+<div class="d-flex col-1">
+<ng-wizard [config]="config" (stepChanged)="stepChanged($event)">
+  
+    <ng-wizard-step [title]="'Step 1'" 
+      [canEnter]="isValidTypeBoolean" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
+      <span>1</span>
+    </ng-wizard-step>
+    
+    <ng-wizard-step [title]="'Step 2'">
+      <span>Step 2 content</span>
+    </ng-wizard-step>
+    
+    <ng-wizard-step [title]="'Step 3'" 
+      [canEnter]="isValidFunctionReturnsObservable.bind(this)" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
+      <span>Step 3 content</span>
+    </ng-wizard-step>
+   
+  <ng-wizard-step [title]="'Step 4'">
+      <span>Step 4 content</span>
+    </ng-wizard-step>
+   
+    <ng-wizard-step [title]="'Step 5'">
+      <span>Step 5 content</span>
+    </ng-wizard-step>
+
+
+    
+    
+   
+  </ng-wizard>
+</div>
+
+<!-- <div class="wizard">
+    <div class="v-line"></div>
+    <div class="step">
+      <span>Step 1</span>
+    </div>
+    <div class="step">
+      <span>Step 2</span>
+    </div>
+    <div class="step">
+      <span>Step 3</span>
+    </div>
+    <div class="step">
+      <span>Step 3</span>
+    </div>
+  </div> -->

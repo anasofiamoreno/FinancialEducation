@@ -8,9 +8,16 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WizardsComponent } from './wizards/wizards.component';
+import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
+import { ServicesAuth } from '../auth/services/services.Auth';
+import { ServicesService } from './services/services.service';
+import { InfoService } from './services/info.service';
+import { EdituserinfoComponent } from './edituserinfo/edituserinfo.component';
 
-
-
+const ngWizardConfig: NgWizardConfig = {
+  theme: THEME.default
+};
 
 @NgModule({
   declarations: [
@@ -20,11 +27,20 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    WizardsComponent,
+    EdituserinfoComponent
   ],
   imports: [
     CommonModule,
     NgxSliderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgWizardModule.forRoot(ngWizardConfig)
+    
+  ],
+  providers:[
+    ServicesAuth,
+    ServicesService,
+    InfoService
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 
