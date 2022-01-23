@@ -8,6 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ServicesAuth } from '../auth/services/services.Auth';
+import { ServicesService } from './services/services.service';
+import { InfoService } from './services/info.service';
+import { EdituserinfoComponent } from './edituserinfo/edituserinfo.component';
 
 
 
@@ -20,11 +24,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    EdituserinfoComponent
   ],
   imports: [
     CommonModule,
     NgxSliderModule,
     ReactiveFormsModule
+  ],
+  providers:[
+    ServicesAuth,
+    ServicesService,
+    InfoService
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

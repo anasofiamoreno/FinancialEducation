@@ -13,6 +13,7 @@
 .banner{
     display:flex;
     align-items: center;
+    justify-content: space-between;
     height: 100px;
     background-color: black;
     
@@ -107,4 +108,12 @@ select{
     height: 100%;
     transform: scale(.9);
     background: url(src/assets/img/level/starfall-gif-67.gif) repeat;
+}
+
+.x{
+    max-width: 2vw;
+}
+
+.coloredit{
+    background-color: yellow;
 }
