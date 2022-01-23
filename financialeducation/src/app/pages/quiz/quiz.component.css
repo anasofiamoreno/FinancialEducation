@@ -5,6 +5,4 @@
     border-radius: 5px;
     cursor:pointer;
   }
-  input[type="radio"]:checked + span {
-    color: #f00;
-  }
+
