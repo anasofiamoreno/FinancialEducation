@@ -27,9 +27,7 @@ max-height: auto;
 }
 
 input{
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
 
 }
 
