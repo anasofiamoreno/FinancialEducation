@@ -44,7 +44,7 @@ get userQuiz(){
           this._userQuiz.level=5;
         break;
     default:
-        alert("Ninguno");
+        alert("Puntuación no capturada, por favor intentalo nuevamente");
 }
   }
 }
