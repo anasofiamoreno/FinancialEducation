@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+  /* font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  */
+
 #check::after {
     background-color: #fefefe;
     border: 1px solid;
@@ -11,14 +17,17 @@
 
   .title{
     color: hsla(13, 100%, 54%, 1);
+    font-family: 'Noto Sans';
   }
 
-  .sizeBox{
-    width: 70%;
+  .card-text{
+    font-size: x-large;
+    font-family: 'Noto Sans';
   }
 
-  .question1-img{
-width: 150px;
+  p.card-text{
+    font-family: 'Noto Sans';
+    font-size: small;
   }
 
   input[type="radio"] + label:before {

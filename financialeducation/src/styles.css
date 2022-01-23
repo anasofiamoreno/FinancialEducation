@@ -1,15 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 @import '~ng-wizard/themes/ng_wizard.min.css';
 @import '~ng-wizard/themes/ng_wizard_theme_circles.min.css';
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 0;
+    width: 380px;
+}
+
 .custom-slider .ngx-slider {
         
         width: 70% !important;
-        
-    }
-
-
+}
 
 .custom-slider .ngx-slider .ngx-slider-bar {
    
