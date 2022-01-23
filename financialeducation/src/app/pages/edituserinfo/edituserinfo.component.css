@@ -1,0 +1,36 @@
+.headere{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lineofdata{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.logo{
+max-width: 15vw;
+max-height: auto;
+}
+
+.x{
+    max-width: 1.5vw;
+max-height: auto;
+}
+
+.edit{
+    max-width: 1.5vw;
+}
+
+input{
+    border: none;
+
+}
+
+.editing{
+
+}

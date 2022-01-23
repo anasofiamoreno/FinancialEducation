@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   <div class="modal-header">
     <h1>BlackRock</h1>
     <button type="button" class="close" aria-label="Close" (click)="closeModal('dismiss')">
@@ -33,5 +34,44 @@
     <p>¿Aún no tienes una cuenta?</p><br/>
     <a>Registrate aquí</a>
   </div>
+=======
+<div class="modal-header header">
+  <img class='logo' src="./assets/img/Logo-BlackRock.png" alt="">
+  <button type="button" class="close" aria-label="Close" (click)="closeModal('dismiss')">
+    <img class='close' src="./assets/img/close.png" alt="">
+  </button>
+</div>
 
+<div class="contenedor-modal"> 
+  <form class="form"  [formGroup]="formLogin" (ngSubmit)="login()">
+    <div class="input-group">
+      <input
+        type="email" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        formControlName="email"
+        required>
+      <label>Ingrese correo</label>
+    </div>
+    
+    <div class="input-group">
+      <input 
+        type="password" 
+        id="exampleInputPassword1" 
+        formControlName="password"
+        required>
+      <span></span>
+      <label>Ingrese contraseña</label>
+    </div>
+>>>>>>> 1009b5db225d0846a655bbc22dceae8575a6c1f8
+
+    <button type="submit" class="button-submit" (click)="login()" [disabled]="formLogin.invalid">Iniciar sesión</button>
+  </form>
+
+
+  <div class="modal-footer d-flex">
+    <p>Para iniciar sesión primero debes realizar el</p><br>
+    <a>Quiz</a>
+  </div>
+</div>
   
