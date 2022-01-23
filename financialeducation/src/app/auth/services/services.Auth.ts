@@ -11,16 +11,28 @@ import { UserInfo } from 'src/app/interfaces/interfaces';
 @Injectable({
   providedIn: 'root',
 })
-export class ServicesService {
+export class ServicesAuth{
   public _user!: User;
 
-  userInfoFromQuiz: UserInfo = {};
+  public userInfo: UserInfo = {
+    name: "",
+  };
+
+  setInfo(info: string | undefined){
+    this.userInfo.name = info
+    console.log("userinfo", this.userInfo.name)
+  }
+
+  getInfo(){
+    return this.userInfo
+  }
 
   get user() {
     return this._user;
   }
   constructor(private auth: Auth) {
     this._user = JSON.parse(localStorage.getItem('user')!) || {};
+    console.log("servicio inicializado")
   }
 
   login(email: string, password: string) {
@@ -45,4 +57,6 @@ export class ServicesService {
     //   // ...
     // });
   }
+
+
 }

@@ -51,6 +51,10 @@ export class RegisterComponent implements OnInit {
     return headers;
   }
 
+  closeModal(){
+    window.location.href = '/';
+  }
+
   getAdress() {
     let option = this.createRequestOption();
 
@@ -138,7 +142,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.sercies.registerData('Ana Sofia', 34, 'Female', 4);
+    this.sercies.registerData('Ana Sofia', 34, 'Female', 4);
 
     this.name = this.sercies.userQuiz.name;
     this.levelgeded = this.sercies.userQuiz.level;
