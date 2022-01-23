@@ -28,13 +28,14 @@ const ngWizardConfig: NgWizardConfig = {
     MainComponent,
     FooterComponent,
     WizardsComponent,
-    EdituserinfoComponent
+    EdituserinfoComponent,
+
   ],
   imports: [
     CommonModule,
     NgxSliderModule,
     ReactiveFormsModule,
-    NgWizardModule.forRoot(ngWizardConfig)
+
     
   ],
   providers:[

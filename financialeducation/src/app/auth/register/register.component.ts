@@ -7,6 +7,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { ServicesService } from 'src/app/pages/services/services.service';
 import { isThisTypeNode } from 'typescript';
+import { ServicesAuth } from '../services/services.Auth';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
