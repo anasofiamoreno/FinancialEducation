@@ -9,6 +9,10 @@ export class MainComponent implements OnInit {
 
   constructor() { }
 
+  showQuix(){
+    window.location.href = '/quiz';
+  }
+
   ngOnInit(): void {
   }
 

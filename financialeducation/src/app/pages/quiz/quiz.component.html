@@ -241,7 +241,7 @@
       <div class="col-md">
         <div class="form-floating">
           <!-- <input type="text" class="register" id="floatingInputGrid" placeholder="Genero" formControlName="gender" > -->
-          <select class="register" id="inputGroupSelect01">
+          <select class="register" id="inputGroupSelect01" formControlName="gender">
             <option hidden selected class="colorSelect">Genero</option>
             <option value="1">Mujer</option>
             <option value="2">Hombre</option>
@@ -258,7 +258,7 @@
   <button type="submit" class="btn btn-warning w-25 h-25" [disabled]="formQuiz.invalid" (click)="openModal()">Enviar Quiz</button>
 </div>
   </form>
-
+  
   <app-wizards></app-wizards>
 
 

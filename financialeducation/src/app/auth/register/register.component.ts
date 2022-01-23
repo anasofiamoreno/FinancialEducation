@@ -7,6 +7,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { ServicesService } from 'src/app/pages/services/services.service';
 import { isThisTypeNode } from 'typescript';
+import { ServicesAuth } from '../services/services.Auth';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -147,14 +148,18 @@ export class RegisterComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.sercies.registerData('Ana Sofia', 34, 'Female', 4);
+    setTimeout(() => {
+      
+    }, 500);
+    console.log(this.sercies.userQuiz);
 
     this.name = this.sercies.userQuiz.name;
     this.levelgeded = this.sercies.userQuiz.level;
     this.age = this.sercies.userQuiz.age;
     this.sex = this.sercies.userQuiz.gender;
-
+    
     switch (this.levelgeded) {
+      
       case 1:
         this.namelevel = 'Elfo ahorrador';
         break;
@@ -176,5 +181,7 @@ export class RegisterComponent implements OnInit {
     setTimeout(() => {
       this.animationR = true;
     }, 3000);
+
+
   }
 }

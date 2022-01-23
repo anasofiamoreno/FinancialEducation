@@ -40,7 +40,7 @@ export class QuizComponent implements OnInit {
     q4option4: [''],
     name: ['', [Validators.required, Validators.minLength(3)]],
     age: ['', [Validators.required, Validators.minLength(2)]],
-    gender: ['', [Validators.required]],
+    gender: ['', [ Validators.minLength(2)]],
   });
 
   get questionOne() {
@@ -66,6 +66,7 @@ export class QuizComponent implements OnInit {
     });
 
     this.servicePage.registerData(name, age, gender, score.length);
+    this.openModal();
   }
 
   value: number = 5;
