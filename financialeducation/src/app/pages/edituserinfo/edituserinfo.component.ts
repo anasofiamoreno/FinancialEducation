@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesAuth } from 'src/app/auth/services/services.Auth';
 import { InfoService } from '../services/info.service';
-import { Auth, getAuth, signOut, updatePassword} from '@angular/fire/auth';
+import { Auth, getAuth, signInWithEmailAndPassword, signOut, updatePassword} from '@angular/fire/auth';
 import { Firestore, updateDoc, doc, getDoc } from '@angular/fire/firestore';
 import { ServicesService } from '../services/services.service';
 
@@ -18,7 +18,8 @@ export class EdituserinfoComponent implements OnInit {
   state: string | undefined = ""
   city: string | undefined = ""
   job: string | undefined = ""
-  editing : boolean = false
+  editing: boolean = false
+  oldpassword: string = ""
   password: string = "**********"
   passwordRepeat: string ="**********"
 
@@ -66,21 +67,51 @@ export class EdituserinfoComponent implements OnInit {
     ).data();
 
     this.infoService.userInfo = infoUser
+  
 
-    if(this.password != "**********" && this.password === this.passwordRepeat && this.password.length >= 8  ){
+    if((this.password != "**********") && (this.password == this.passwordRepeat) && this.password.length >= 7  ){
 
-      const user: any = getAuth().currentUser
-      updatePassword(user, this.password).then(() => {
-      console.log("ok")
-      }).catch((error) => {
-      console.log("fail")
-      });
+     
+     
+      await signInWithEmailAndPassword(getAuth(), this.email, this.oldpassword)
+      .then( async (userCredential) => {
+        
 
-      this.password = "**********"
+        const user: any = getAuth().currentUser
+        await updatePassword(user, this.password).then(() => {
+        console.log("ok")
+        }).catch((error) => {
+        console.log("fail")
+        });
+        this.password = "**********"
+        this.passwordRepeat = "**********"
+        
+      })
+      .catch((error) => {
+          alert("Contraseña no coinside")
+          this.password = "**********"
       this.passwordRepeat = "**********"
+      });
+     
+     
+     
+     
+     
+     
+     
+      
+
+      
+
+
+
+
+
+
+
     }
     else{
-      alert("Password Incorrecto")
+      if(this.password != "**********" || this.passwordRepeat != "**********")alert("Password corto o no coinsiden")
       this.password = "**********"
       this.passwordRepeat = "**********"
     }

@@ -20,6 +20,10 @@
       <p class="mb-0 mx-3">Correo Electronico</p>
       <input class="mx-3 editing" type="text" name="emailuser" [(ngModel)]="email" readonly/>
     </div>
+    <div *ngIf="editing" class="lineofdata">
+      <p class="mb-0 mx-3">Contraseña Actual </p>
+      <input class="mx-3 editing" type="text" name="oldpassworduserepited" [(ngModel)]="oldpassword" style="border-width: 2px; border-bottom-style: solid"/>
+    </div>
     <div class="lineofdata">
       <p class="mb-0 mx-3">Contraseña</p>
       <input class="mx-3 editing" type="text" name="passworduser" [(ngModel)]="password" readonly/>
