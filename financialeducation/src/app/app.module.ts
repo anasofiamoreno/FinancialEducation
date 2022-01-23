@@ -14,13 +14,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/register/register.component';
 
+
  
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
+    RegisterComponent
   ],
   imports: [
     AuthModule,
