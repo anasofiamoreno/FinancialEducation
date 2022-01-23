@@ -33,11 +33,11 @@ export class HeaderComponent implements OnInit {
     openModalUser () { 
       const modalRef = this.modalService.open (EdituserinfoComponent, 
         { 
-          scrollable: false,
+          scrollable: true,
           windowClass: 'myCustomModalClass', 
           keyboard: true,
           backdrop: 'static',
-          centered: true
+
         });
         
       }

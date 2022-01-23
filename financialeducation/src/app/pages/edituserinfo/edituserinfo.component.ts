@@ -3,7 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesAuth } from 'src/app/auth/services/services.Auth';
 import { InfoService } from '../services/info.service';
 import { Auth, signOut} from '@angular/fire/auth';
-import { Firestore, setDoc, updateDoc } from 'firebase/firestore';
+import { Firestore, setDoc, updateDoc } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-edituserinfo',
