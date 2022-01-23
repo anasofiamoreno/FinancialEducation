@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesAuth } from 'src/app/auth/services/services.Auth';
 import { InfoService } from '../services/info.service';
-import { Auth, signOut} from '@angular/fire/auth';
+import { Auth, getAuth, signOut, updatePassword} from '@angular/fire/auth';
 import { Firestore, updateDoc, doc, getDoc } from '@angular/fire/firestore';
 import { ServicesService } from '../services/services.service';
 
@@ -19,6 +19,8 @@ export class EdituserinfoComponent implements OnInit {
   city: string | undefined = ""
   job: string | undefined = ""
   editing : boolean = false
+  password: string = "**********"
+  passwordRepeat: string ="**********"
 
   constructor(private modalService: NgbModal, private infoService: InfoService,  private auth: Auth, private db:Firestore, private servicePage: ServicesService) { }
 
@@ -65,6 +67,24 @@ export class EdituserinfoComponent implements OnInit {
 
     this.infoService.userInfo = infoUser
 
+    if(this.password != "**********" && this.password === this.passwordRepeat && this.password.length >= 8  ){
+
+      const user: any = getAuth().currentUser
+      updatePassword(user, this.password).then(() => {
+      console.log("ok")
+      }).catch((error) => {
+      console.log("fail")
+      });
+
+      this.password = "**********"
+      this.passwordRepeat = "**********"
+    }
+    else{
+      alert("Password Incorrecto")
+      this.password = "**********"
+      this.passwordRepeat = "**********"
+    }
+
     
 
 
@@ -77,6 +97,26 @@ export class EdituserinfoComponent implements OnInit {
         
     });
 
+
+  }
+
+  cancelData(){
+
+    this.name = typeof this.infoService.userInfo?.name == "string" ? this.infoService.userInfo?.name : ""
+    this.email = typeof this.infoService.userInfo?.email == "string" ? this.infoService.userInfo?.email : ""
+    this.state = this.infoService.userInfo?.state
+    this.city = this.infoService.userInfo?.city
+    this.job = this.infoService.userInfo?.job
+    this.password = "**********"
+
+    this.editing = !this.editing
+
+    const items = document.querySelectorAll(".editing")
+    items.forEach(item => {
+      item.setAttribute("readonly", "")
+      item.setAttribute("style", "background: white; border-botton: none")
+        
+    });
 
   }
 

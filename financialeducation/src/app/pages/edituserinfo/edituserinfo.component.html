@@ -9,6 +9,7 @@
       <h4 class="mb-0">Datos del Perfil</h4> 
       <img *ngIf="!editing" src="assets/img/edit.png" class="edit mx-3"alt="" (click)="editData()">
       <img *ngIf="editing" src="assets/img/save.png" class="edit mx-3"alt="" (click)="saveData()">
+      <p *ngIf="editing" class="edit my-0" alt="" (click)="cancelData()">Cancelar</p>
     </div>
     
     <div class="lineofdata">
@@ -17,7 +18,15 @@
     </div>
     <div class="lineofdata">
       <p class="mb-0 mx-3">Correo Electronico</p>
-      <input class="mx-3 editing" type="text" [value]="email" readonly/>
+      <input class="mx-3 editing" type="text" name="emailuser" [(ngModel)]="email" readonly/>
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Contraseña</p>
+      <input class="mx-3 editing" type="text" name="passworduser" [(ngModel)]="password" readonly/>
+    </div>
+    <div *ngIf="editing" class="lineofdata">
+      <p class="mb-0 mx-3">Repetir Contraseña</p>
+      <input class="mx-3 editing" type="text" name="passworduserepited" [(ngModel)]="passwordRepeat" style="border-width: 2px; border-bottom-style: solid"/>
     </div>
     <div class="lineofdata">
       <p class="mb-0 mx-3">Ocupacion</p>
