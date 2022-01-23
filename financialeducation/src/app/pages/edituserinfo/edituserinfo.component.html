@@ -1,0 +1,49 @@
+<div class="border">
+  <div class="mx-3 headere my-3">
+    <img class="logo" src="assets/img/Logo-BlackRock.png" alt="" />
+
+    <img (click)="closeModal()" class="x" src="assets/img/x.png" alt="" />
+  </div>
+  <div>
+    <div class="d-flex flex-row align-items-center mx-3">
+      <h4 class="mb-0">Datos del Perfil</h4> 
+      <img *ngIf="!editing" src="assets/img/edit.png" class="edit mx-3"alt="" (click)="editData()">
+      <img *ngIf="editing" src="assets/img/save.png" class="edit mx-3"alt="" (click)="saveData()">
+    </div>
+    
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Nombre</p>
+      <input class="mx-3 editing" type="text" [value]="name" readonly />
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Correo Electronico</p>
+      <input class="mx-3 editing" type="text" [value]="email" readonly/>
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Ocupacion</p>
+      <input class="mx-3 editing" type="text" [value]="job" readonly/>
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Estado</p>
+      <input class="mx-3 editing" type="text" [value]="state" readonly/>
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Ciudad</p>
+      <input class="mx-3 editing" type="text" [value]="city" readonly/>
+    </div>
+  </div>
+  <div>
+    <h4 class="mx-3 my-3">Avance de Aprendizaje</h4>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+  <div class="d-flex flex-column justifi-content-center mx-5 mb-3">
+    <button (click)="closeS()" >Cerrar Sesión</button>
+  </div>
+</div>
+

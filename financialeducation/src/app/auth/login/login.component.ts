@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
-import { ServicesService } from '../services/services.service';
+import { ServicesAuth } from '../services/services.Auth';
 import { User } from '../login';
 import { GoogleAuthProvider} from '@firebase/auth';
 
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   constructor(
     public activeModal: NgbActiveModal,
     private auth:Auth,
-    private authService:ServicesService,
+    private authService:ServicesAuth,
     private fb:FormBuilder,
     private router:Router
   ) { }

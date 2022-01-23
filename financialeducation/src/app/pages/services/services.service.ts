@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { UserInfo } from 'src/app/interfaces/interfaces';
 import { UserQuiz } from '../interfaces';
 
 @Injectable({
@@ -6,6 +7,10 @@ import { UserQuiz } from '../interfaces';
 })
 export class ServicesService {
 private _userQuiz!:UserQuiz
+
+public userInfo: UserInfo | undefined = {
+  name: "",
+};
 
 get userQuiz(){
   return this._userQuiz

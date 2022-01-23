@@ -7,5 +7,6 @@
     <a href="" class='nav2'>Registrarse</a>
     <button  class="nav1" (click)="openModal()">Iniciar sesion</button>
     <button class=' nav2'>Registrarse</button>
+    <button *ngIf="email!= ''" (click)="openModalUser()" >Usuario</button>
   </nav>
 </header>

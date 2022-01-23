@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { doc, Firestore, getDoc, DocumentData } from '@angular/fire/firestore';
 import { UserInfo } from 'src/app/interfaces/interfaces';
+import { ServicesAuth } from 'src/app/auth/services/services.Auth';
+import { ServicesService } from '../services/services.service';
+import { InfoService } from '../services/info.service';
+import { Auth, onAuthStateChanged } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-courses',
@@ -52,12 +56,13 @@ export class CoursesComponent implements OnInit {
   };
 
   age: string = '';
-  name: string = '';
+  name: string | undefined = '';
   level: number = 0;
+  email: string = ""
 
   opa: string = '0.4';
 
-  constructor(private db: Firestore) {}
+  constructor(private db: Firestore, private servicesAuth: ServicesAuth, private servicesPages: ServicesService, private infoService: InfoService, private auth: Auth ) {}
 
   setLevel(event: any) {
     this.fnChangeNamesAndLinks(parseInt(event.target.parentElement.name));
@@ -148,13 +153,36 @@ export class CoursesComponent implements OnInit {
     }
   }
 
-  async ngOnInit(): Promise<void> {
+  async getData(){
+
     this.infoUser = await (
-      await getDoc(doc(this.db, 'costumer', 'test5'))
+      await getDoc(doc(this.db, 'costumer', "test1@test.com"))
     ).data();
     this.level = this.infoUser?.level === undefined ? 0 : this.infoUser.level;
     this.selectedLevel = this.level;
     this.fnHiddeLevels(this.infoUser?.level);
     this.fnChangeNamesAndLinks(this.level);
+    this.name = this.infoUser?.name
+    this.infoService.userInfo = this.infoUser
+  }
+
+  async ngOnInit(): Promise<void> {
+
+    onAuthStateChanged(this.auth, (user) => {
+      if(user){
+        console.log(user)
+        this.email = typeof user?.email === 'string' ?  user.email : "" 
+        this.getData()
+      }else{
+        window.location.href = '/';
+      } 
+    })
+    
+    
+
+    
+
+
+ 
   }
 }
