@@ -148,13 +148,16 @@ export class RegisterComponent implements OnInit {
   
 
   ngOnInit(): void {
+    setTimeout(() => {
+      
+    }, 500);
     console.log(this.sercies.userQuiz);
 
     this.name = this.sercies.userQuiz.name;
     this.levelgeded = this.sercies.userQuiz.level;
     this.age = this.sercies.userQuiz.age;
     this.sex = this.sercies.userQuiz.gender;
-
+    
     switch (this.levelgeded) {
       
       case 1:
@@ -178,5 +181,7 @@ export class RegisterComponent implements OnInit {
     setTimeout(() => {
       this.animationR = true;
     }, 3000);
+
+
   }
 }
