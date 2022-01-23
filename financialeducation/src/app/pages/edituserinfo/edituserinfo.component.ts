@@ -3,7 +3,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesAuth } from 'src/app/auth/services/services.Auth';
 import { InfoService } from '../services/info.service';
 import { Auth, signOut} from '@angular/fire/auth';
-import { Firestore, setDoc, updateDoc } from '@angular/fire/firestore';
+import { Firestore } from '@angular/fire/firestore';
+//import { Firestore, setDoc, updateDoc } from 'firebase/firestore';
 
 @Component({
   selector: 'app-edituserinfo',
@@ -19,7 +20,7 @@ export class EdituserinfoComponent implements OnInit {
   job: string | undefined = ""
   editing : boolean = false
 
-  constructor(private modalService: NgbModal, private infoService: InfoService,  private auth: Auth, private db: Firestore) { }
+  constructor(private modalService: NgbModal, private infoService: InfoService,  private auth: Auth, private db:Firestore) { }
 
   closeS(){
     signOut(this.auth)

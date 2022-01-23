@@ -26,6 +26,25 @@ get userQuiz(){
     gender:gender,
     level:score
   }
-   
+   console.log(this._userQuiz)
+   switch (true) {
+    case score > 0 && score <= 3:
+       this._userQuiz.level=1
+        break;
+    case score > 3 && score <= 7:
+      this._userQuiz.level=2;
+        break;
+        case score > 7 && score <= 10:
+          this._userQuiz.level=3;
+        break;
+        case score > 10 && score <= 13:
+          this._userQuiz.level=4;
+        break;
+        case score > 13 && score <= 17:
+          this._userQuiz.level=5;
+        break;
+    default:
+        alert("Ninguno");
+}
   }
 }

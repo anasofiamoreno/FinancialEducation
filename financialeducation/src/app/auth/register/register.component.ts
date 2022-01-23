@@ -148,10 +148,7 @@ export class RegisterComponent implements OnInit {
   
 
   ngOnInit(): void {
-    //this.sercies.registerData('Ana Sofia', 34, 'Female', 4);
-    console.log(this.sercies.userQuiz)
-
-    console.log(ServicesAuth)
+    console.log(this.sercies.userQuiz);
 
     this.name = this.sercies.userQuiz.name;
     this.levelgeded = this.sercies.userQuiz.level;
@@ -159,6 +156,7 @@ export class RegisterComponent implements OnInit {
     this.sex = this.sercies.userQuiz.gender;
 
     switch (this.levelgeded) {
+      
       case 1:
         this.namelevel = 'Elfo ahorrador';
         break;
