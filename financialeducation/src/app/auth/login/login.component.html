@@ -1,6 +1,6 @@
   <div class="modal-header">
-    <h4 class="modal-title">BlackRock</h4>
-    <button type="button" class="close" aria-label="Close" (click)="closeModal('dismiss')">
+    <h4 class="modal-title">Inicia sesión</h4>
+    <button type="button" class="close btn-dark" aria-label="Close" (click)="closeModal('dismiss')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
@@ -22,15 +22,14 @@
       <div class="mb-3">
         <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" placeholder="Ingrese contraseña">
       </div>
-      <button type="submit" class="btn btn-dark" (click)="login()" [disabled]="formLogin.invalid">Iniciar sesión</button>
+      <button type="submit" class="btn btn-danger" (click)="login()" [disabled]="formLogin.invalid">Iniciar sesión</button>
     </form>
     <hr>
-     <button type="click" class="btn btn-dark" (click)="loginGoogle()">Google</button>
+     <button type="click" class="btn btn-secondary" (click)="loginGoogle()"><img style="width:7%; padding-right: 2%;" src="/assets/img/google.png" alt="google"/>Google</button>
    
   </div>
   <div class="modal-footer">
-    <p>¿Aún no tienes una cuenta?</p><br>
-    <a>Registrate aquí</a>
+    <p>Para registrarte realiza este <a href="...">Quiz</a></p>
   </div>
 
   

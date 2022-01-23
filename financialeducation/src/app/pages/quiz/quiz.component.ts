@@ -2,6 +2,8 @@ import { Options } from '@angular-slider/ngx-slider';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServicesService } from '../services/services.service';
+import { RegisterComponent } from '../../auth/register/register.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-quiz',
@@ -12,8 +14,7 @@ import { ServicesService } from '../services/services.service';
 export class QuizComponent implements OnInit {
 
 public question1:boolean[]=[];
-public event:boolean=false;
-public event1:boolean=false;
+
 
   formQuiz: FormGroup= this.fb.group({
     question1option1: [''],
@@ -78,29 +79,31 @@ public event1:boolean=false;
       if (value <= 2.5) {
           return 'red';
       }
-      if (value <= 5) {
+      if (value <= 7) {
           return 'orange';
       }
-      if (value <= 7.5) {
-          return 'yellow';
+      if (value <= 8) {
+          return '#FFCE00';
       }
-      return '#2AE02A';
+      return '#FFCE00';
     }
   };
 
-  changeStatus(event:any){
-    console.log(event);
-     console.log(event.target.checked);
-    
-     this.event=event.target.checked;
-     this.event1=false;
-  }
-  changeStatus1(event1:any){
-    this.event1=event1.target.checked;
-    this.event=false;
-  }
+  openModal () { 
+    const modalRef = this.modalService.open (RegisterComponent, 
+      { 
+        scrollable: true,
+        // windowClass: 'myCustomModalClass', 
+        keyboard: false,
+        backdrop: 'static',
+        size: 'lg', 
+        windowClass: 'modal-xl'
+      });
+      
+    }
 
-  constructor(private fb:FormBuilder, private servicePage:ServicesService) { }
+  
+  constructor(private fb:FormBuilder, private servicePage:ServicesService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }

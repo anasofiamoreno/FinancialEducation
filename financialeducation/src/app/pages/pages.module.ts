@@ -8,7 +8,12 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { WizardsComponent } from './wizards/wizards.component';
+import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
+ 
+const ngWizardConfig: NgWizardConfig = {
+  theme: THEME.default
+};
 
 
 
@@ -20,11 +25,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    WizardsComponent,
   ],
   imports: [
     CommonModule,
     NgxSliderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgWizardModule.forRoot(ngWizardConfig)
+    
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 
