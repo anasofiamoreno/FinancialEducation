@@ -487,43 +487,47 @@
           Ingresa los siguientes datos para recibir tu plan de educación
           financiera de manera personalizada
         </h5>
-        <div class="row g-2">
+        <div class="row g-2 p-3">
           <div class="col-md">
-            <div class="form-floating">
+
+            <div class="form-floating inputs-group">
               <input
                 type="text"
-                class="form-control"
+                class="input-datos"
                 id="floatingInputGrid"
-                placeholder="Nombre"
                 formControlName="name"
+                required
               />
-              <label for="floatingInputGrid">Nombre</label>
+              <label class="labels">Nombre</label>
             </div>
+
           </div>
           <div class="col-md">
-            <div class="form-floating">
+            <div class="form-floating inputs-group">
               <input
                 type="number"
-                class="form-control"
+                class="input-datos"
                 id="floatingInputGrid"
-                placeholder="Edad"
                 formControlName="age"
+                required
               />
-              <label for="floatingInputGrid">Edad</label>
+              <label class="labels">Edad</label>
             </div>
           </div>
-          <div class="col-md">
-            <div class="form-floating">
+          <div class="col-md ">
+            <div class="form-floating inputs-group">
               <!-- <input type="text" class="register" id="floatingInputGrid" placeholder="Genero" formControlName="gender" > -->
               <select
                 class="register"
                 id="inputGroupSelect01"
                 formControlName="gender"
               >
+
                 <option hidden selected class="colorSelect">Genero</option>
                 <option value="Mujer">Mujer</option>
                 <option value="Hombre">Hombre</option>
                 <option value="Otro">Otro</option>
+
               </select>
             </div>
           </div>
@@ -535,10 +539,7 @@
           type="submit"
           class="btn btn-warning w-25 h-25"
           [disabled]="formQuiz.invalid"
-          (click)="openModal()"
-        >
-          Enviar Quiz
-        </button>
+          (click)="playSound()"> Enviar Quiz</button>
       </div>
     </form>
   </div>

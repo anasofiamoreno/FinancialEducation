@@ -1,11 +1,12 @@
-<div class="border">
-  <div class="mx-3 headere my-3">
+<div class="border contenedor">
+  <div class=" header p-4">
     <img class="logo" src="assets/img/Logo-BlackRock.png" alt="" />
 
-    <img (click)="closeModal()" class="x" src="assets/img/x.png" alt="" />
+    <img (click)="closeModal()" class="x" src="assets/img/close-black.png" alt="" />
   </div>
+
   <div>
-    <div class="d-flex flex-row align-items-center mx-3">
+    <div class=" d-flex flex-row align-items-center mx-3 ">
       <h4 class="mb-0">Datos del Perfil</h4> 
       <img *ngIf="!editing" src="assets/img/edit.png" class="edit mx-3"alt="" (click)="editData()">
       <img *ngIf="editing" src="assets/img/save.png" class="edit mx-3"alt="" (click)="saveData()">
@@ -33,7 +34,7 @@
       <input class="mx-3 editing" type="text" name="passworduserepited" [(ngModel)]="passwordRepeat" style="border-width: 2px; border-bottom-style: solid"/>
     </div>
     <div class="lineofdata">
-      <p class="mb-0 mx-3">Ocupacion</p>
+      <p class="mb-0 mx-3">Ocupación</p>
       <input class="mx-3 editing" type="text" name="jovuser" [(ngModel)]="job" readonly/>
     </div>
     <div class="lineofdata">

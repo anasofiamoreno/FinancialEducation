@@ -142,9 +142,9 @@ export class CoursesComponent implements OnInit {
         this.course01link =
           'assets/img/level/Duracion_vs _Horizonte _de _inversion.png';
         this.levelMod1 = 'Horizonte de Inversión. ¿Qué debo considerar para determinar el horizonte de Inversión?.';  
-        this.course02link = '';
+        this.course02link = 'assets/img/rv.jpeg';
         this.levelMod2 = '¿Qué es el mercado de renta variable?. Mercado de renta variable en México. ';
-        this.course03link = '';
+        this.course03link = 'assets/img/CR.webp';
         this.levelMod3 = 'Calcular rendimientos según el instrumento de Inversión. Calculadora de rendimientos.';
         this.contentLevel = this.level03content[1];
         break;
@@ -152,11 +152,11 @@ export class CoursesComponent implements OnInit {
         this.course01 = 'Fondos de inversion';
         this.course02 = 'ETFs';
         this.course03 = 'Portafolio diversificado';
-        this.course01link = '';
+        this.course01link = 'assets/img/FIH.png';
         this.levelMod1 = '¿Qué son y cómo funcionan los Fondos de Inversión?. Identificando los Fondos de inversión más rentables.';
-        this.course02link = '';
+        this.course02link = 'https://www.inbestme.com/blog/wp-content/uploads/2021/07/que-son-los-etfs.jpg';
         this.levelMod2 = '¿Qué es un ETF y cómo funciona?. Diferencia entre fondo de inversión y ETF.';
-        this.course03link = '';
+        this.course03link = 'assets/img/PD.webp';
         this.levelMod3 = '¿Qué es un portafolio diversificado?. ¿Cómo y por qué diversificar un portafolio?';
         this.contentLevel = this.level04content[1];
         break;
@@ -164,11 +164,11 @@ export class CoursesComponent implements OnInit {
         this.course01 = 'Derivados';
         this.course02 = 'Futuros, forwards y swaps';
         this.course03 = 'Opciones';
-        this.course01link = '';
+        this.course01link = 'assets/img/der.jpeg';
         this.levelMod1 = 'Derivado Financiero - Concepto. Activos más comúnes. ¿Cómo se clasifican?';
-        this.course02link = '';
+        this.course02link = 'assets/img/FFS.png';
         this.levelMod2 = '¿Qué son los forwards y futuros?. ¿Qué es un swap?. Diferencia entre futuros, forwards y swaps.';
-        this.course03link = '';
+        this.course03link = 'assets/img/options.png';
         this.levelMod3 = '¿Qué son las opciones?. Características y subtipos. Ventajas y desventajas del instrumento.';
         this.contentLevel = this.level05content[1];
         break;

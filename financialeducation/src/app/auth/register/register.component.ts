@@ -144,19 +144,19 @@ export class RegisterComponent implements OnInit {
 
 		switch (this.levelgeded) {
 			case 1:
-				this.namelevel = 'Elfo ahorrador';
+				this.namelevel = 'Modo Zombie';
 				break;
 			case 2:
-				this.namelevel = 'Escudero del dinero';
+				this.namelevel = 'Modo Survivor';
 				break;
 			case 3:
-				this.namelevel = 'Caballero del ahorro';
+				this.namelevel = 'Modo Ejecutivo';
 				break;
 			case 4:
-				this.namelevel = 'Mago de las finanzas';
+				this.namelevel = 'Modo Elite';
 				break;
 			case 5:
-				this.namelevel = 'Leyenda de las inversiones';
+				this.namelevel = 'Modo Leyenda';
 				break;
 			default:
 		}
