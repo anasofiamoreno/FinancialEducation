@@ -46,10 +46,10 @@ export class LoginComponent implements OnInit {
               console.log(resp.user.email);
               if(resp.user.email=='admin@administrador.com'){
                 console.log('entro')
-                this.router.navigateByUrl('/admin')
+                window.location.href ='/admin'
               }
               if(resp.user.email!="admin@administrador.com"){
-                this.router.navigateByUrl('/courses')
+                window.location.href = '/courses'
               }
               
               
