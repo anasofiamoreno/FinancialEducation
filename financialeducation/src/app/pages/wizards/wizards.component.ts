@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgWizardService, STEP_STATE, THEME, NgWizardConfig, StepChangedArgs, StepValidationArgs } from 'ng-wizard';
 import { of } from 'rxjs';
+import { InfoService } from '../services/info.service';
 
 
 @Component({
@@ -26,11 +27,21 @@ export class WizardsComponent implements OnInit {
       ],
     }
   };
+
+
+  stateColor: boolean = false
  
-  constructor(private ngWizardService: NgWizardService) {
+  constructor(private ngWizardService: NgWizardService, public infoServices: InfoService) {
+
+
+    this.stateColor = infoServices.stateColor
   }
+
+
+
  
   ngOnInit() {
+    console.log(this.stateColor)
   }
  
   showPreviousStep(event?: Event) {

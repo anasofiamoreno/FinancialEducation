@@ -1,32 +1,45 @@
 <div class="d-flex col-1">
-<ng-wizard [config]="config" (stepChanged)="stepChanged($event)">
-  
-    <ng-wizard-step [title]="'Step 1'" 
-      [canEnter]="isValidTypeBoolean" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
+  <ng-wizard [config]="config" (stepChanged)="stepChanged($event)">
+    <ng-wizard-step
+      [title]="'Step 1'"
+      [canEnter]="isValidTypeBoolean"
+      [canExit]="isValidFunctionReturnsBoolean.bind(this)"
+      [ngClass]="{ colorin: infoServices.stateColor }"
+      *ngIf="stateColor"
+    >
       <span>1</span>
     </ng-wizard-step>
-    
+
     <ng-wizard-step [title]="'Step 2'">
       <span>Step 2 content</span>
     </ng-wizard-step>
-    
-    <ng-wizard-step [title]="'Step 3'" 
-      [canEnter]="isValidFunctionReturnsObservable.bind(this)" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
+
+    <ng-wizard-step
+      [title]="'Step 3'"
+      [canEnter]="isValidFunctionReturnsObservable.bind(this)"
+      [canExit]="isValidFunctionReturnsBoolean.bind(this)"
+    >
       <span>Step 3 content</span>
     </ng-wizard-step>
-   
-  <ng-wizard-step [title]="'Step 4'">
+
+    <ng-wizard-step [title]="'Step 4'">
       <span>Step 4 content</span>
     </ng-wizard-step>
-   
+
     <ng-wizard-step [title]="'Step 5'">
       <span>Step 5 content</span>
     </ng-wizard-step>
 
+    <ng-wizard-step></ng-wizard-step>
 
-    <button _ngcontent-poc-c118="" type="button" ng-reflect-ng-class="btn btn-secondary ng-wizard-bt" class="btn btn-secondary ng-wizard-btn-next">Next</button>  
-    
-   
+    <button
+      _ngcontent-poc-c118=""
+      type="button"
+      ng-reflect-ng-class="btn btn-secondary ng-wizard-bt"
+      class="btn btn-secondary ng-wizard-btn-next"
+    >
+      Next
+    </button>
   </ng-wizard>
 </div>
 

@@ -101,3 +101,46 @@ select{
   color:gray
 }
 
+.circle-step{
+  padding: 30px;
+  border: solid;
+  border-radius: 30px;
+  margin: auto;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  height: 90%;
+  width: 7vw;
+  position: fixed;
+  left: 0%;
+  top: 100px;
+}
+
+.quiz-view{
+  scrollbar-width: 0;
+  width: 88vw;
+}
+
+.all-view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  top: 100px;
+}
+
+.bbgred{
+  background-color: red;
+}
+
+.bbwhite{
+  background-color: white;
+}
+
+
+::-webkit-scrollbar {display: none;}

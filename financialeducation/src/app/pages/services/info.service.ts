@@ -17,5 +17,7 @@ export class InfoService {
 
   }
 
+  stateColor: boolean = true
+
   constructor() { }
 }

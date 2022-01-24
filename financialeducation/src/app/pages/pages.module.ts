@@ -13,6 +13,7 @@ import { NgWizardConfig, NgWizardModule, THEME } from 'ng-wizard';
 import { ServicesAuth } from '../auth/services/services.Auth';
 import { ServicesService } from './services/services.service';
 import { InfoService } from './services/info.service';
+import { TestComponent } from './test/test.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.default
@@ -27,12 +28,14 @@ const ngWizardConfig: NgWizardConfig = {
     MainComponent,
     FooterComponent,
     WizardsComponent,
+    TestComponent,
 
   ],
   imports: [
     CommonModule,
     NgxSliderModule,
     ReactiveFormsModule,
+    NgWizardModule
 
     
   ],
