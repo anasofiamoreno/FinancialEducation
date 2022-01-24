@@ -12,7 +12,7 @@
 
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <button  class="nav1 button-1" (click)="openModal()">Iniciar sesion</button>
+            <button  class="nav1 button-1" *ngIf="email == '' && path != '/quiz'" (click)="openModal()">Iniciar sesion</button>
           </li>
           <li class="nav-item">
             <button class="nav1 button-1" *ngIf="email!= ''" (click)="openModalUser()" >Usuario</button>
