@@ -91,6 +91,10 @@ export class LoginComponent implements OnInit {
       
     }
 
+    showQuix(){
+      window.location.href = '/quiz';
+    }
+
   ngOnInit(): void {
   }
 
