@@ -12,6 +12,8 @@ public userInfo: UserInfo | undefined = {
   name: "",
 };
 
+public eventWizar?:Event;
+
 get userQuiz(){
   return this._userQuiz
 }
@@ -46,5 +48,9 @@ get userQuiz(){
     default:
         alert("Puntuación no capturada, por favor intentalo nuevamente");
 }
+  }
+  eventWizard(event?:Event){
+    this.eventWizar=event
+    return this.eventWizar
   }
 }
