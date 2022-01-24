@@ -10,46 +10,46 @@ import { PagequizComponent } from './pages/pagequiz/pagequiz.component';
 import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'quiz',
-    component: QuizComponent,
-  },
-  {
-    path: 'quizPage',
-    component: PagequizComponent,
-  },
-  {
-    path: 'courses',
-    component: CoursesComponent,
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-  },
-  {
-    path: 'edituser',
-    component: EdituserinfoComponent,
-  },
-  {
-    path: 'test',
-    component: TestComponent,
-  },
-  {
-    path: 'admin',
-    component: AdminComponent,
-  },
-  {
-    path: '**',
-    component: HomeComponent,
-  },
+	{
+		path: '',
+		component: HomeComponent
+	},
+	{
+		path: 'quiz',
+		component: QuizComponent
+	},
+	{
+		path: 'quizPage',
+		component: PagequizComponent
+	},
+	{
+		path: 'courses',
+		component: CoursesComponent
+	},
+	{
+		path: 'register',
+		component: RegisterComponent
+	},
+	{
+		path: 'edituser',
+		component: EdituserinfoComponent
+	},
+	{
+		path: 'test',
+		component: TestComponent
+	},
+	{
+		path: 'admin',
+		component: AdminComponent
+	},
+	{
+		path: '**',
+		component: HomeComponent
+	}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+	imports: [ RouterModule.forRoot(routes) ],
+	exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
