@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
   name: string | undefined = ""
   email: string | undefined = ""
+  path: string = ""
 
 
   constructor(private modalService: NgbModal, private authServices: ServicesAuth, private infoServices: InfoService, private auth: Auth) { }
@@ -52,6 +53,8 @@ export class HeaderComponent implements OnInit {
       }
     })
 
+    this.path = window.location.pathname
+    console.log(window.location.pathname)
     
 
   }
