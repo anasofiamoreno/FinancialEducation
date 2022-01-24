@@ -12,6 +12,8 @@ public userInfo: UserInfo | undefined = {
   name: "",
 };
 
+public eventWizar?:Event;
+
 get userQuiz(){
   return this._userQuiz
 }
@@ -28,7 +30,7 @@ get userQuiz(){
   }
    console.log(this._userQuiz)
    switch (true) {
-    case score > 0 && score <= 3:
+    case score >= 0 && score <= 3:
        this._userQuiz.level=1
         break;
     case score > 3 && score <= 7:
@@ -44,7 +46,11 @@ get userQuiz(){
           this._userQuiz.level=5;
         break;
     default:
-        alert("Ninguno");
+        alert("Puntuación no capturada, por favor intentalo nuevamente");
 }
+  }
+  eventWizard(event?:Event){
+    this.eventWizar=event
+    return this.eventWizar
   }
 }

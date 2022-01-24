@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+#check::after {
+  background-color: #fefefe;
+  border: 1px solid;
+  border-color: rgb(2, 2, 2);
+  border-radius: 5px;
+  cursor:pointer;
+}
+input[type="radio"]:checked + span {
+  color: #f00;
+}
 
-  /* font-family: 'Noto Sans', sans-serif;
-  font-weight: bold;
-  */
+.title{
+  color: hsla(13, 100%, 54%, 1);
+}
 
+<<<<<<< HEAD
 #check::after {
     background-color: #fefefe;
     border: 1px solid;
@@ -11,4 +21,187 @@
     border-radius: 5px;
     cursor:pointer;
   }
+=======
+.sizeBox{
+  width: 70%;
+}
+
+.question1-img{
+width: 150px;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  float: left;
+  margin: 0.5em 0.5em 0 0;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 100%;
+}
+
+/* Centra el input personalizado con el texto */
+.custom-radio-checkbox {
+display: inline-flex;
+align-items: center;
+cursor: pointer;
+font-family: arial;
+}
+
+/* Modificador para dar la imagen de radio */
+.custom-radio-checkbox__show--radio {
+background-image: url(/assets/img/cuadro.png); 
+margin-right: 30%;
+}
+
+/* Oculta input original */
+.custom-radio-checkbox > .custom-radio-checkbox__input {
+display: none;
+}
+
+/* Radio personalizado usando <span> */
+.custom-radio-checkbox > .custom-radio-checkbox__show {
+display: inline-block;
+width: 80px;
+height: 80px;
+margin-right: .5rem;
+background-size: cover;
+}
+
+/* Cambia el radio personalizado cuando es pulsado */
+.custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
+background-image: url(/assets/img/tipoCambio.gif);
+}
+
+.img-resp{
+max-width: 20vw;
+height: auto;
+}
+.img-resp-quest3{
+
+  max-width: 15vw;
+  height: auto;
+
+}
+.ahorro-inversion{
+margin-right: 8%;
+}
+
+/* .register {
+width: 200px;
+border: none;
+border-bottom: 2px solid rgb(0, 0, 0);
+border-radius: none;
+background: none;
+outline: 0px;
+} */
+
+select{
+color:gray
+}
+
+.circle-step{
+  padding: 30px;
+  border: solid;
+  border-radius: 30px;
+  margin: auto;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  height: 90%;
+  width: 7vw;
+  position: fixed;
+  left: 0%;
+  top: 100px;
+}
+
+.quiz-view{
+  scrollbar-width: 0;
+  width: 88vw;
+}
+
+.all-view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  top: 100px;
+}
+
+.bbgred{
+  background-color: red;
+}
+
+.bbwhite{
+  background-color: white;
+}
+
+
+::-webkit-scrollbar {display: none;}
+
+
+
+/* INPUTS DE INGRESAR DATOS */
+
+.inputs-group {
+  position: relative;
+  margin: 10px;
+  font-family: Noto Sans;
+}
+
+.input-datos {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #757575;
+}
+
+.input-datos:focus {
+  outline: none;
+  border-bottom: 2px solid #FFCE00;
+}
+
+.labels {
+  color: #999;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 3px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.input-datos:focus ~ .labels,
+.input-datos:valid ~ .labels {
+  top: -20px;
+  font-size: 14px;
+  color: #FFCE00;
+}
+>>>>>>> 2d24b5b797ef042388f5db357e35f1aff09af9c8
+
+select {
+  font-family: Noto Sans;
+  padding: 10px 10px 10px 5px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #757575;
+  color: gray; 
+}
+
+select:focus {
+  outline: none;
+  border-bottom: 2px solid #FFCE00;
+}
+
 

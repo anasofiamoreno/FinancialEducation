@@ -13,11 +13,13 @@ import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/register/register.component';
+import { EdituserinfoComponent } from './pages/edituserinfo/edituserinfo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    EdituserinfoComponent
   ],
   imports: [
     AuthModule,

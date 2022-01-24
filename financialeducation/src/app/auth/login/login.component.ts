@@ -43,7 +43,16 @@ export class LoginComponent implements OnInit {
               }
               this.authService._user=this.user
               localStorage.setItem('user',JSON.stringify(this.authService.user) );
-              this.router.navigateByUrl('/courses')
+              console.log(resp.user.email);
+              if(resp.user.email=='admin@administrador.com'){
+                console.log('entro')
+                window.location.href ='/admin'
+              }
+              if(resp.user.email!="admin@administrador.com"){
+                window.location.href = '/courses'
+              }
+              
+              
              this.closeModal('dismiss')
             
             
@@ -80,6 +89,10 @@ export class LoginComponent implements OnInit {
           })
         });
       
+    }
+
+    showQuix(){
+      window.location.href = '/quiz';
     }
 
   ngOnInit(): void {

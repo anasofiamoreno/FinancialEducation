@@ -2,8 +2,7 @@
 .banner{
     display:flex;
     align-items: center;
-    height: 100px;
-    
+    height: 100px;  
 }
 
 .level-group{
@@ -71,7 +70,7 @@ align-items: center;
 .groupcurses{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .btn-course{
