@@ -19,6 +19,7 @@ import { PagequizComponent } from './pagequiz/pagequiz.component';
 import { AdminComponent } from './admin/admin.component';
 import { BttnFilterComponent } from './admin/bttn-filter/bttn-filter.component';
 import { WizardsComponent } from './wizards/wizards.component';
+import { InfoFilterComponent } from './admin/info-filter/info-filter.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.default
@@ -36,6 +37,7 @@ const ngWizardConfig: NgWizardConfig = {
     AdminComponent,
     BttnFilterComponent,
     WizardsComponent,
+    InfoFilterComponent,
 
   ],
   imports: [

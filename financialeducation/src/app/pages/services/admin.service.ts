@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, getDoc } from '@angular/fire/firestore';
+import { Firestore, getDoc, DocumentData } from '@angular/fire/firestore';
 import { collection, getDocs, query, where } from '@firebase/firestore';
 
 @Injectable({
@@ -8,6 +8,8 @@ import { collection, getDocs, query, where } from '@firebase/firestore';
 export class AdminService {
 
  public filterAdmin!:string 
+ public data!:DocumentData[]
+
 
   constructor(private bd:Firestore ) { }
 
@@ -17,7 +19,7 @@ export class AdminService {
       this.filterAdmin='age'
     }
     if(categoria==2){
-      this.filterAdmin='city'
+      this.filterAdmin='state'
     }
     if(categoria==3){
       this.filterAdmin='sex'
@@ -27,11 +29,13 @@ export class AdminService {
     console.log(subcategoria);
 
     const q = query(collection(this.bd, "costumer"), where(this.filterAdmin, "==", subcategoria));
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
-    return doc.data();
-});
+    return await getDocs(q);
+    // querySnapshot.forEach((doc) => {
+    // console.log(doc.id, " => ", doc.data());
+    // this.data=doc.data()
+    // console.log(this.data)
+    // //return doc.data();
+//});
   }
   
 }

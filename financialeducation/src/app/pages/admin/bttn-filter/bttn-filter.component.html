@@ -1,13 +1,4 @@
 <div class="d-flex justify-content-center mt-5">
-
-    <!-- <button 
-       type="button" 
-       class="btn btn-primary btn-lg m-4 px-5 "
-       *ngFor="let item of buttons"
-       (click)="filterAdmin(item)"
-       >{{item}}
-       
-     </button> -->
     <form [formGroup]="formFilter" (ngSubmit)="filterAdmin()">
         <h5 class="mb-5 bg-dark p-4 text-white text-center">Busqueda de información</h5>
           <div class="row g-2">
@@ -16,7 +7,7 @@
                   <select class="register" id="inputGroupSelect01" formControlName="categoria">
                     <option hidden selected class="colorSelect">Categoria</option>
                     <option value="1">Edad</option>
-                    <option value="2">Ciudad</option>
+                    <option value="2">Estado</option>
                     <option value="3">Genero</option>
                   </select>
                 </div>
@@ -37,3 +28,29 @@
           </div>
     </form>
  </div>
+
+
+ <div>
+   <!-- <p>{{item['city']}}</p> -->
+   <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Edad</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Email</th>
+        <th scope="col">Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let item of data">
+        <td>{{item['age']}}</td>
+        <td>{{item['city']}}</td>
+        <td>{{item['email']}}</td>
+        <td>{{item['name']}}</td>
+          
+      </tr>
+    </tbody>
+  </table>  
+   
+ </div>
+ 

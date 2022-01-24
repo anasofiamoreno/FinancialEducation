@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../../services/admin.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DocumentData, doc } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-bttn-filter',
@@ -8,7 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./bttn-filter.component.css']
 })
 export class BttnFilterComponent implements OnInit {
-  
+  public data:DocumentData[]=[]
+
   formFilter: FormGroup = this.fb.group({
     categoria: ['', [Validators.required]],
     subcategoria: [''],
@@ -20,6 +22,19 @@ export class BttnFilterComponent implements OnInit {
   filterAdmin(){
    const {categoria, subcategoria}=this.formFilter.value
    this.adminService.filter(categoria,subcategoria)
+     .then((result) => {
+       result.forEach((doc)=>{
+        console.log(doc.id, " => ", doc.data());
+        console.log(doc.data());
+        this.data.push(doc.data());
+        console.log(this.data);
+        this.adminService.data=this.data;
+       })
+    
+    //return doc.data();
+});
+   
+   
   }
 
   ngOnInit(): void {
