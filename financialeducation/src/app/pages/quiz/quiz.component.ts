@@ -93,14 +93,13 @@ export class QuizComponent implements OnInit {
   openModal () { 
     const modalRef = this.modalService.open (RegisterComponent, 
       { 
-        //scrollable: true,
-        // windowClass: 'myCustomModalClass', 
+        scrollable: true,
+        windowClass: 'myCustomModalClass', 
         keyboard: false,
         backdrop: 'static',
-        size: 'lg', 
+        size: 'lg',
       });
-      
-    }
+  }
 
     eventWizar(event:Event){
       console.log(event)
@@ -199,5 +198,14 @@ export class QuizComponent implements OnInit {
 
   
 
+
+  
+  playSound() {
+    let audio = new Audio();
+    audio.src = "./assets/audio/fan.mp3"
+    audio.volume = 0.02;
+    audio.play();
+  }
+ 
 
 }
