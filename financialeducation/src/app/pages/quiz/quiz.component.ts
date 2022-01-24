@@ -174,7 +174,7 @@ export class QuizComponent implements OnInit {
   playSound() {
     let audio = new Audio();
     audio.src = "./assets/audio/fan.mp3"
-    audio.volume = 0.02;
+    audio.volume = 0.2;
     audio.play();
   }
 
