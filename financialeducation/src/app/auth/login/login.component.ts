@@ -43,7 +43,16 @@ export class LoginComponent implements OnInit {
               }
               this.authService._user=this.user
               localStorage.setItem('user',JSON.stringify(this.authService.user) );
-              this.router.navigateByUrl('/courses')
+              console.log(resp.user.email);
+              if(resp.user.email=='admin@administrador.com'){
+                console.log('entro')
+                this.router.navigateByUrl('/admin')
+              }
+              if(resp.user.email!="admin@administrador.com"){
+                this.router.navigateByUrl('/courses')
+              }
+              
+              
              this.closeModal('dismiss')
             
             

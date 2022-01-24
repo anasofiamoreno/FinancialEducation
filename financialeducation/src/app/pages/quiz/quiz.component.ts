@@ -40,7 +40,7 @@ export class QuizComponent implements OnInit {
     q4option4: [''],
     name: ['', [Validators.required, Validators.minLength(3)]],
     age: ['', [Validators.required, Validators.minLength(2)]],
-    gender: ['', ],
+    gender: ['',[Validators.required]],
   });
 
   get questionOne() {
@@ -94,10 +94,15 @@ export class QuizComponent implements OnInit {
         scrollable: true,
         windowClass: 'myCustomModalClass', 
         keyboard: false,
-        // backdrop: 'static',
+        backdrop: 'static',
         size: 'lg',
       });
   }
+
+    eventWizar(event:Event){
+      console.log(event)
+      this.servicePage.eventWizar=event;
+    }
 
   
   constructor(private fb:FormBuilder, private servicePage:ServicesService, private modalService: NgbModal) { }

@@ -9,11 +9,14 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WizardsComponent } from './wizards/wizards.component';
-import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
+import { NgWizardConfig, NgWizardModule, THEME } from 'ng-wizard';
 import { ServicesAuth } from '../auth/services/services.Auth';
 import { ServicesService } from './services/services.service';
 import { InfoService } from './services/info.service';
 import { EdituserinfoComponent } from './edituserinfo/edituserinfo.component';
+import { PagequizComponent } from './pagequiz/pagequiz.component';
+import { AdminComponent } from './admin/admin.component';
+import { BttnFilterComponent } from './admin/bttn-filter/bttn-filter.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.default
@@ -28,7 +31,8 @@ const ngWizardConfig: NgWizardConfig = {
     MainComponent,
     FooterComponent,
     WizardsComponent,
-    EdituserinfoComponent,
+    AdminComponent,
+    BttnFilterComponent,
 
   ],
   imports: [
