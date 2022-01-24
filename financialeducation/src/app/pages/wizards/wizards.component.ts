@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgWizardService, STEP_STATE, THEME, NgWizardConfig, StepChangedArgs, StepValidationArgs } from 'ng-wizard';
 import { of } from 'rxjs';
+import { InfoService } from '../services/info.service';
 import { ServicesService } from '../services/services.service';
 
 
@@ -30,6 +31,9 @@ export class WizardsComponent implements OnInit {
    
   constructor(private ngWizardService: NgWizardService, private servicePage:ServicesService) {
   }
+
+
+
  
   
   ngOnInit() {

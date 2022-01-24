@@ -1,9 +1,10 @@
 import { Options } from '@angular-slider/ngx-slider';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServicesService } from '../services/services.service';
 import { RegisterComponent } from '../../auth/register/register.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { InfoService } from '../services/info.service';
 
 @Component({
   selector: 'app-quiz',
@@ -42,6 +43,7 @@ export class QuizComponent implements OnInit {
     age: ['', [Validators.required, Validators.minLength(2)]],
     gender: ['',[Validators.required]],
   });
+
 
   get questionOne() {
     return this.formQuiz;
@@ -105,7 +107,98 @@ export class QuizComponent implements OnInit {
     }
 
   
-  constructor(private fb:FormBuilder, private servicePage:ServicesService, private modalService: NgbModal) { }
+  constructor(private fb:FormBuilder, private servicePage:ServicesService, private modalService: NgbModal, private infoServices: InfoService, public el: ElementRef)  { }
+
+  stateColor: boolean = false
+  step01: boolean = true
+  step02: boolean = false
+  step03: boolean = false
+  step04: boolean = false
+  step05: boolean = false
+
+
+  @HostListener("scroll", ['$Event'])
+
+  @HostListener('window:scroll', ['$event'])
+  windowwsPos(){
+    const comp = this.el.nativeElement.offsetTop
+    const scrollPosition = window.pageYOffset
+    console.log(comp, scrollPosition)
+  }
+
+
+  ss: any 
+  changeColor( $event: Event){
+    this.ss = $event?.currentTarget
+    const scroll = this.ss.scrollY
+   
+
+    if(scroll<=949){
+      this.step01 = true
+      this.step02 = false
+      this.step03 = false
+      this.step04 = false
+      this.step05 = false
+    }
+    if(scroll>= 950 && scroll<=1499){
+      this.step01 = false
+      this.step02 = true
+      this.step03 = false
+      this.step04 = false
+      this.step05 = false
+    }
+    if(scroll>= 1500 && scroll<=1999){
+      this.step01 = false
+      this.step02 = false
+      this.step03 = true
+      this.step04 = false
+      this.step05 = false
+    }
+    if(scroll>= 2000 && scroll<=2399){
+      this.step01 = false
+      this.step02 = false
+      this.step03 = false
+      this.step04 = true
+      this.step05 = false
+    }
+    if(scroll>= 2400){
+      this.step01 = false
+      this.step02 = false
+      this.step03 = false
+      this.step04 = false
+      this.step05 = true
+    }
+    
+  }
+
+  ngOnInit(): void {
+
+
+    // window.onscroll = function() {
+      
+    //   console.log("Vertical: " + window.scrollY);
+    //   if(window.scrollY >= 1000){
+    //    let ii = document.getElementById("step2")
+       
+
+
+
+
+
+     
+
+
+        
+    //   }
+
+    // };
+
+    
+  }
+
+  
+
+
   
   playSound() {
     let audio = new Audio();
@@ -115,5 +208,4 @@ export class QuizComponent implements OnInit {
   }
  
 
-  ngOnInit(): void {}
 }
