@@ -79,14 +79,14 @@ height: auto;
 margin-right: 8%;
 }
 
-.register {
+/* .register {
 width: 200px;
 border: none;
 border-bottom: 2px solid rgb(0, 0, 0);
 border-radius: none;
 background: none;
 outline: 0px;
-}
+} */
 
 select{
 color:gray
@@ -135,3 +135,63 @@ color:gray
 
 
 ::-webkit-scrollbar {display: none;}
+
+
+
+/* INPUTS DE INGRESAR DATOS */
+
+.inputs-group {
+  position: relative;
+  margin: 10px;
+  font-family: Noto Sans;
+}
+
+.input-datos {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #757575;
+}
+
+.input-datos:focus {
+  outline: none;
+  border-bottom: 2px solid #FFCE00;
+}
+
+.labels {
+  color: #999;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 3px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.input-datos:focus ~ .labels,
+.input-datos:valid ~ .labels {
+  top: -20px;
+  font-size: 14px;
+  color: #FFCE00;
+}
+
+select {
+  font-family: Noto Sans;
+  padding: 10px 10px 10px 5px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #757575;
+  color: gray; 
+}
+
+select:focus {
+  outline: none;
+  border-bottom: 2px solid #FFCE00;
+}
+
+
