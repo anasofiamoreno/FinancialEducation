@@ -171,41 +171,13 @@ export class QuizComponent implements OnInit {
     
   }
 
-  ngOnInit(): void {
-
-
-    // window.onscroll = function() {
-      
-    //   console.log("Vertical: " + window.scrollY);
-    //   if(window.scrollY >= 1000){
-    //    let ii = document.getElementById("step2")
-       
-
-
-
-
-
-     
-
-
-        
-    //   }
-
-    // };
-
-    
-  }
-
-  
-
-
-  
   playSound() {
     let audio = new Audio();
     audio.src = "./assets/audio/fan.mp3"
     audio.volume = 0.02;
     audio.play();
   }
- 
+
+  ngOnInit(): void {}
 
 }

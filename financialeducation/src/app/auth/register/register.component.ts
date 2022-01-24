@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
   state: string = '';
   city: string = '';
   study: string = 'Estudios';
-  job: string = 'Ocupacion';
+  job: string = 'Ocupación';
   passwordmessage: string = '';
   levelgeded: number = 0;
   namelevel: string = '';
@@ -97,10 +97,10 @@ export class RegisterComponent implements OnInit {
 
     if (
       this.cp.length <= 4 ||
-      this.job == 'Ocupacion' ||
+      this.job == 'Ocupación' ||
       this.study == 'Estudios'
     ) {
-      return alert('Datos Incompletos, CP, Ocupacion o Estudios');
+      return alert('Datos Incompletos, CP, Ocupación o Estudios');
     }
 
     await createUserWithEmailAndPassword(this.auth, this.email, this.password)
