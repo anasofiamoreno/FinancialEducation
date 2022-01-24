@@ -13,29 +13,17 @@ export class AdminService {
 
   constructor(private bd:Firestore ) { }
 
-  async filter(categoria:number, subcategoria:any){
-   
-    if (categoria==1){
-      this.filterAdmin='age'
-    }
-    if(categoria==2){
-      this.filterAdmin='state'
-    }
-    if(categoria==3){
-      this.filterAdmin='sex'
-    }
+  async filter(categoria:string, subcategoria:any){
+    this.filterAdmin=categoria;
     
-    console.log(this.filterAdmin);
-    console.log(subcategoria);
+    if (categoria=='age'){
+      subcategoria=parseInt(subcategoria);
+    }
+   
 
     const q = query(collection(this.bd, "costumer"), where(this.filterAdmin, "==", subcategoria));
     return await getDocs(q);
-    // querySnapshot.forEach((doc) => {
-    // console.log(doc.id, " => ", doc.data());
-    // this.data=doc.data()
-    // console.log(this.data)
-    // //return doc.data();
-//});
+    
   }
   
 }
