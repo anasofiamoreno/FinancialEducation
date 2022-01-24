@@ -1,25 +1,39 @@
+import { rendererTypeName } from '@angular/compiler';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { setDoc } from 'firebase/firestore';
+import { render, screen } from '@testing-library/angular';
 
 import { EdituserinfoComponent } from './edituserinfo.component';
 
 describe('EdituserinfoComponent', () => {
-  let component: EdituserinfoComponent;
-  let fixture: ComponentFixture<EdituserinfoComponent>;
+	let component: EdituserinfoComponent;
+	let fixture: ComponentFixture<EdituserinfoComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ EdituserinfoComponent ]
-    })
-    .compileComponents();
-  });
+	test("Bucas nombre de 'Sofia", async () => {
+		render(EdituserinfoComponent, {
+			componentProperties: {
+				name: 'Sofia'
+			}
+		});
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(EdituserinfoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		const screantest = screen.findByText('Sofia');
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+		console.log('-------------------------------------------------------------------', screantest);
+	});
+
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [ EdituserinfoComponent ]
+		}).compileComponents();
+	});
+
+	beforeEach(() => {
+		fixture = TestBed.createComponent(EdituserinfoComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
+
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

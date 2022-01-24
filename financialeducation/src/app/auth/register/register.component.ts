@@ -68,9 +68,9 @@ export class RegisterComponent implements OnInit {
 		});
 	}
 
-	checkCp() {
+	async checkCp() {
 		this.sepomex = 'https://sepomex.razektheone.com/codigo_postal?cp=' + this.cp;
-		this.getAdress();
+		await this.getAdress();
 	}
 
 	ls(event: any) {
@@ -83,8 +83,6 @@ export class RegisterComponent implements OnInit {
 	}
 
 	async sendForm() {
-		console.log(this.sex);
-
 		if (this.password.length <= 7 || this.password != this.passwordConfirm || this.email == '') {
 			return alert('Datos Incompletos, revise correo y constraseña');
 		}
