@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center mt-5">
+
+    <!-- <button 
+       type="button" 
+       class="btn btn-primary btn-lg m-4 px-5 "
+       *ngFor="let item of buttons"
+       (click)="filterAdmin(item)"
+       >{{item}}
+       
+     </button> -->
+    <form [formGroup]="formFilter" (ngSubmit)="filterAdmin()">
+        <h5 class="mb-5 bg-dark p-4 text-white text-center">Busqueda de información</h5>
+          <div class="row g-2">
+            <div class="col-md">
+                <div class="form-floating">
+                  <select class="register" id="inputGroupSelect01" formControlName="categoria">
+                    <option hidden selected class="colorSelect">Categoria</option>
+                    <option value="1">Edad</option>
+                    <option value="2">Ciudad</option>
+                    <option value="3">Genero</option>
+                  </select>
+                </div>
+              </div> 
+
+            <div class="col-md">
+              <div class="form-floating">
+                <input  class="form-control" id="floatingInputGrid" placeholder="Nombre" formControlName="subcategoria">
+                <label for="floatingInputGrid">Subcategoria:</label>
+              </div>
+            </div>
+            
+           
+           </div> 
+
+           <div class="d-flex flex-column justify-content-center align-items-center"> 
+            <button type="submit" class="btn btn-warning w-25 h-25" [disabled]="formFilter.invalid">Enviar</button>
+          </div>
+    </form>
+ </div>
