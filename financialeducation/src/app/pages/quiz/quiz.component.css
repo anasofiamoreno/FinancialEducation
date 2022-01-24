@@ -1,103 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
-
-  /* font-family: 'Noto Sans', sans-serif;
-  font-weight: bold;
-  */
-
 #check::after {
-    background-color: #fefefe;
-    border: 1px solid;
-    border-color: rgb(2, 2, 2);
-    border-radius: 5px;
-    cursor:pointer;
-  }
-  input[type="radio"]:checked + span {
-    color: #f00;
-  }
+  background-color: #fefefe;
+  border: 1px solid;
+  border-color: rgb(2, 2, 2);
+  border-radius: 5px;
+  cursor:pointer;
+}
+input[type="radio"]:checked + span {
+  color: #f00;
+}
 
-  .title{
-    color: hsla(13, 100%, 54%, 1);
-    font-family: 'Noto Sans';
-  }
+.title{
+  color: hsla(13, 100%, 54%, 1);
+}
 
-  .card-text{
-    font-size: x-large;
-    font-family: 'Noto Sans';
-  }
+.sizeBox{
+  width: 70%;
+}
 
-  p.card-text{
-    font-family: 'Noto Sans';
-    font-size: small;
-  }
+.question1-img{
+width: 150px;
+}
 
-  input[type="radio"] + label:before {
-    content: "";
-    width: 26px;
-    height: 26px;
-    float: left;
-    margin: 0.5em 0.5em 0 0;
-    border: 2px solid #ccc;
-    background: #fff;
-    border-radius: 100%;
+input[type="radio"] + label:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  float: left;
+  margin: 0.5em 0.5em 0 0;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 100%;
 }
 
 /* Centra el input personalizado con el texto */
 .custom-radio-checkbox {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: arial;
+display: inline-flex;
+align-items: center;
+cursor: pointer;
+font-family: arial;
 }
 
 /* Modificador para dar la imagen de radio */
 .custom-radio-checkbox__show--radio {
- background-image: url(/assets/img/cuadro.png); 
- margin-right: 30%;
+background-image: url(/assets/img/cuadro.png); 
+margin-right: 30%;
 }
 
 /* Oculta input original */
 .custom-radio-checkbox > .custom-radio-checkbox__input {
-  display: none;
+display: none;
 }
 
 /* Radio personalizado usando <span> */
 .custom-radio-checkbox > .custom-radio-checkbox__show {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  margin-right: .5rem;
-  background-size: cover;
+display: inline-block;
+width: 80px;
+height: 80px;
+margin-right: .5rem;
+background-size: cover;
 }
 
 /* Cambia el radio personalizado cuando es pulsado */
 .custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
-  background-image: url(/assets/img/tipoCambio.gif);
+background-image: url(/assets/img/tipoCambio.gif);
 }
 
 .img-resp{
-  max-width: 20vw;
-  height: auto;
+max-width: 20vw;
+height: auto;
 }
 .img-resp-quest3{
-  
-    max-width: 15vw;
-    height: auto;
-  
+
+  max-width: 15vw;
+  height: auto;
+
 }
 .ahorro-inversion{
-  margin-right: 8%;
+margin-right: 8%;
 }
 
 .register {
-  width: 200px;
-  border: none;
-  border-bottom: 2px solid rgb(0, 0, 0);
-  border-radius: none;
-  background: none;
-  outline: 0px;
+width: 200px;
+border: none;
+border-bottom: 2px solid rgb(0, 0, 0);
+border-radius: none;
+background: none;
+outline: 0px;
 }
 
 select{
-  color:gray
+color:gray
 }
-
