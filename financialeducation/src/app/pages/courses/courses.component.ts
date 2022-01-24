@@ -152,7 +152,7 @@ export class CoursesComponent implements OnInit {
         this.course01 = 'Fondos de inversion';
         this.course02 = 'ETFs';
         this.course03 = 'Portafolio diversificado';
-        this.course01link = 'assets/img/FI.png';
+        this.course01link = 'assets/img/FIH.png';
         this.levelMod1 = '¿Qué son y cómo funcionan los Fondos de Inversión?. Identificando los Fondos de inversión más rentables.';
         this.course02link = 'https://www.inbestme.com/blog/wp-content/uploads/2021/07/que-son-los-etfs.jpg';
         this.levelMod2 = '¿Qué es un ETF y cómo funciona?. Diferencia entre fondo de inversión y ETF.';
