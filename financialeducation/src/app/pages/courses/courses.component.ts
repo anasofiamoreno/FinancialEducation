@@ -179,7 +179,7 @@ export class CoursesComponent implements OnInit {
   async getData(){
 
     this.infoUser = await (
-      await getDoc(doc(this.db, 'costumer', "test1@test.com"))
+      await getDoc(doc(this.db, 'costumer', this.email))
     ).data();
     this.level = this.infoUser?.level === undefined ? 0 : this.infoUser.level;
     this.selectedLevel = this.level;

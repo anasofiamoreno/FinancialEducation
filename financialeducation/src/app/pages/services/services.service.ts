@@ -30,7 +30,7 @@ get userQuiz(){
   }
    console.log(this._userQuiz)
    switch (true) {
-    case score > 0 && score <= 3:
+    case score >= 0 && score <= 3:
        this._userQuiz.level=1
         break;
     case score > 3 && score <= 7:
