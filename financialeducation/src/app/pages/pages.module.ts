@@ -15,6 +15,8 @@ import { ServicesService } from './services/services.service';
 import { InfoService } from './services/info.service';
 import { EdituserinfoComponent } from './edituserinfo/edituserinfo.component';
 import { PagequizComponent } from './pagequiz/pagequiz.component';
+import { AdminComponent } from './admin/admin.component';
+import { BttnFilterComponent } from './admin/bttn-filter/bttn-filter.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.default
@@ -29,6 +31,8 @@ const ngWizardConfig: NgWizardConfig = {
     MainComponent,
     FooterComponent,
     WizardsComponent,
+    AdminComponent,
+    BttnFilterComponent,
 
   ],
   imports: [
