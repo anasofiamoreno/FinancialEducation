@@ -41,7 +41,7 @@ export class QuizComponent implements OnInit {
     q4option4: [''],
     name: ['', [Validators.required, Validators.minLength(3)]],
     age: ['', [Validators.required, Validators.minLength(2)]],
-    gender: [''],
+    gender: ['',[Validators.required]],
   });
 
 
@@ -93,14 +93,18 @@ export class QuizComponent implements OnInit {
   openModal () { 
     const modalRef = this.modalService.open (RegisterComponent, 
       { 
-        scrollable: true,
+        //scrollable: true,
         // windowClass: 'myCustomModalClass', 
         keyboard: false,
         backdrop: 'static',
         size: 'lg', 
-        windowClass: 'modal-xl'
       });
       
+    }
+
+    eventWizar(event:Event){
+      console.log(event)
+      this.servicePage.eventWizar=event;
     }
 
   

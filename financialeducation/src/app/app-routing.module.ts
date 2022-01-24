@@ -6,6 +6,8 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { EdituserinfoComponent } from './pages/edituserinfo/edituserinfo.component';
 import { TestComponent } from './pages/test/test.component';
+import { PagequizComponent } from './pages/pagequiz/pagequiz.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,10 @@ const routes: Routes = [
   {
     path: 'quiz',
     component: QuizComponent,
+  },
+  {
+    path: 'quizPage',
+    component: PagequizComponent,
   },
   {
     path: 'courses',
@@ -31,6 +37,10 @@ const routes: Routes = [
   {
     path: 'test',
     component: TestComponent,
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
   },
   {
     path: '**',
