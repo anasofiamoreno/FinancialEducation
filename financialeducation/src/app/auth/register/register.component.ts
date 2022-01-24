@@ -140,7 +140,7 @@ export class RegisterComponent implements OnInit {
     } else {
       this.passwordmessage = '';
       if (this.password != this.passwordConfirm) {
-        this.passwordmessage = 'Contraseñas no coinsiden';
+        this.passwordmessage = 'Contraseñas no coinciden';
       }
     }
   }
@@ -182,6 +182,7 @@ export class RegisterComponent implements OnInit {
       this.animationR = true;
     }, 3000);
 
-
+    
   }
+
 }
