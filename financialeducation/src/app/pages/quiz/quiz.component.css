@@ -13,7 +13,6 @@ input[type="radio"]:checked + span {
   color: hsla(13, 100%, 54%, 1);
 }
 
-<<<<<<< HEAD
 #check::after {
     background-color: #fefefe;
     border: 1px solid;
@@ -21,7 +20,7 @@ input[type="radio"]:checked + span {
     border-radius: 5px;
     cursor:pointer;
   }
-=======
+
 .sizeBox{
   width: 70%;
 }
@@ -188,7 +187,6 @@ color:gray
   font-size: 14px;
   color: #FFCE00;
 }
->>>>>>> 2d24b5b797ef042388f5db357e35f1aff09af9c8
 
 select {
   font-family: Noto Sans;
