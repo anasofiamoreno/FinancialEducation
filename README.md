@@ -24,11 +24,11 @@ Estudiantes y/o trabajadores
  [prototipo de alto nivel](https://www.figma.com/file/GxE0a2uM1ISEVsq2hGJz9L/Untitled?node-id=0%3A1)
 
 *Home
- ![Home](financialeducation\src\assets\img\homeMD.png)
+ ![Home](https://github.com/CarolinaCasas/FinancialEducation/blob/quizcaro/financialeducation/src/assets/img/homeMD.png)
  *Quiz
- ![Quiz](financialeducation\src\assets\img\quizMD.png)
+ ![Quiz](https://github.com/CarolinaCasas/FinancialEducation/blob/quizcaro/financialeducation/src/assets/img/quizMD.png)
  *Courses
- ![Courses](financialeducation\src\assets\img\cursosMD.png)
+ ![Courses](https://github.com/CarolinaCasas/FinancialEducation/blob/quizcaro/financialeducation/src/assets/img/cursosMD.png)
 ## Construido con 🛠️
 ### Framework:
 <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> [Angular](https://angular.io/) 
