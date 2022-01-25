@@ -23,6 +23,7 @@
 
 .img-size-course{
     height: 300px;
+    max-width: 300px;
 }
 
 .img-size:hover{
