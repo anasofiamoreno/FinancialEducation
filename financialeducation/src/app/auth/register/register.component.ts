@@ -12,6 +12,9 @@ import { isThisTypeNode } from 'typescript';
 	templateUrl: './register.component.html',
 	styleUrls: [ './register.component.css' ]
 })
+
+
+
 export class RegisterComponent implements OnInit {
 	name: string | null = '';
 	public email: string = '';
@@ -28,6 +31,7 @@ export class RegisterComponent implements OnInit {
 	passwordmessage: string = '';
 	levelgeded: number = 0;
 	namelevel: string = '';
+	
 	animationR: boolean = false;
 
 	texts: string[] = [
@@ -37,6 +41,9 @@ export class RegisterComponent implements OnInit {
 		'Has alcanzado esa libertad financiera que tanto anhelabas, aunque hoy el trabajar sea una opción, aún te falta aprender a incrementar tus inversiones para cambiar esa libertad por Abundancia. Aquí te mostramos cómo lograrlo.',
 		'¡Por fin alcanzaste la abundancia Financiera con la que tanto soñabas y por la que tanto trabajaste! Hoy tienes ya un conocimiento amplio sobre finanzas, sabes poner a trabajar tu dinero y disfrutas ese nivel que tienes. No olvides que podemos charlar sobre temas financieros en el momento que lo decidas, estamos a un click de distancia.'
 	];
+
+	public levelimage! : string;
+	// imgLevel01:string = '';
 
 	constructor(
 		private http: HttpClient,
@@ -107,7 +114,9 @@ export class RegisterComponent implements OnInit {
 						study: this.study,
 						job: this.job,
 						level: this.levelgeded,
-						namelevel: this.namelevel
+						namelevel: this.namelevel,
+						levelimage: this.levelimage
+
 					});
 					localStorage.clear();
 					window.location.href = '/courses';
@@ -144,19 +153,25 @@ export class RegisterComponent implements OnInit {
 
 		switch (this.levelgeded) {
 			case 1:
+
 				this.namelevel = 'Modo Zombie';
+				this.levelimage = 'assets/img/courses/zombie.gif';
 				break;
 			case 2:
 				this.namelevel = 'Modo Survivor';
+				this.levelimage = 'assets/img/courses/survivor.gif';
 				break;
 			case 3:
 				this.namelevel = 'Modo Ejecutivo';
+				this.levelimage = 'assets/img/courses/executive.gif';
 				break;
 			case 4:
 				this.namelevel = 'Modo Elite';
+				this.levelimage = 'assets/img/courses/elite.gif';
 				break;
 			case 5:
 				this.namelevel = 'Modo Leyenda';
+				this.levelimage = 'assets/img/courses/legend.gif';
 				break;
 			default:
 		}

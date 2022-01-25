@@ -1,5 +1,7 @@
 <app-header class="position-fixed vw-100" style="z-index: +4"></app-header>
+
 <div class="all-view" (window:scroll)="changeColor($event)">
+
   <div class="sidebar">
     <p id="step1" class="circle-step" [ngClass]="{ bbgred: step01 }">1</p>
     <p id="step3" class="circle-step" [ngClass]="{ bbgred: step02 }">2</p>
@@ -7,20 +9,22 @@
     <p id="step5" class="circle-step" [ngClass]="{ bbgred: step04 }">4</p>
     <p id="step6" class="circle-step" [ngClass]="{ bbgred: step05 }">5</p>
   </div>
+
   <div class="quiz-view">
     <form class=".container m-5" [formGroup]="formQuiz" (ngSubmit)="score()">
       <h1 class="mb-5 title text-center">
         ¿Tus finanzas te tienen viviendo en modo zombie o será que ya vives como
-        toda una leyenda de las finanzas??
+        toda una leyenda de las finanzas?
       </h1>
       <h3>¡Descubre tu mood financiero en este corto y divertido Quiz!</h3>
+      
       <!-- Pregunta 1 con respuestas -->
-      <div id="question1" class=".container">
+      <div id="question1" class="mb-5 mt-5">
         <h5 class="mb-5 bg-dark p-4 text-white text-center">
-          Selecciona todas las opciones de las que tengas conocimiento
+          Selecciona las opciones que conozcas
         </h5>
 
-        <div class="row d-flex justify-content-center align-items-center">
+        <div class="row d-flex justify-content-center align-items-rigth">
           <div class="col-11 col-sm-3">
             <div class="card mb-3" style="width: 18rem">
               <input
@@ -53,7 +57,7 @@
                   class="card-img-top question1-img"
                   alt="Fondos de inversion"
                 />
-                <p class="card-text">Fondos de inversión</p>
+                <p class="card-text">Fondos de Inversión</p>
               </label>
             </div>
           </div>
@@ -90,7 +94,7 @@
                   class="card-img-top question1-img"
                   alt="Tipo-de-cambio"
                 />
-                <p class="card-text">Tipo de cambio</p>
+                <p class="card-text">Tipo de Cambio</p>
               </label>
             </div>
           </div>
@@ -269,7 +273,7 @@
 
         <div class="input-group d-flex flex-row justify-content-around color">
           <p style="width: 30%" class="d-flex align-items-center">
-            Es la opción mas liquida
+            Es la opción mas líquida
           </p>
           <div class="d-flex flex-row">
             <label class="custom-radio-checkbox">
@@ -404,7 +408,7 @@
             </label>
           </div>
 
-          <div class="card mb-5 m-5" style="width: 18rem">
+          <div class="card mb-4 m-5" style="width: 18rem">
             <input
               type="checkbox"
               id="q5option2"
@@ -485,7 +489,7 @@
       <div id="question5" class="mb-3">
         <h5 class="mb-5 bg-dark p-4 text-white text-center">
           Ingresa los siguientes datos para recibir tu plan de educación
-          financiera de manera personalizada
+          financiera de manera personalizada.
         </h5>
         <div class="row g-2 p-3">
           <div class="col-md">
@@ -516,14 +520,13 @@
           </div>
           <div class="col-md ">
             <div class="form-floating inputs-group">
-              <!-- <input type="text" class="register" id="floatingInputGrid" placeholder="Genero" formControlName="gender" > -->
               <select
                 class="register"
                 id="inputGroupSelect01"
                 formControlName="gender"
               >
 
-                <option hidden selected class="colorSelect">Genero</option>
+                <option value="" hidden selected class="colorSelect">Género</option>
                 <option value="Mujer">Mujer</option>
                 <option value="Hombre">Hombre</option>
                 <option value="Otro">Otro</option>

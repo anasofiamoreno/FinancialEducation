@@ -92,6 +92,8 @@ select{
 color:gray
 }
 
+/* BARRA  */
+
 .circle-step{
   padding: 30px;
   border: solid;
@@ -107,7 +109,8 @@ color:gray
   width: 7vw;
   position: fixed;
   left: 0%;
-  top: 100px;
+  top: 120px;
+  bottom: 50px;
 }
 
 .quiz-view{
@@ -126,7 +129,7 @@ color:gray
 }
 
 .bbgred{
-  background-color: red;
+  background-color: #FFCE00;
 }
 
 .bbwhite{
