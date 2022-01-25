@@ -13,6 +13,20 @@ body {
     border-radius: 0;
 }
 
+/* ngb-modal-window .component-host-scrollable {
+    overflow: scroll;
+
+} */
+/* 
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+	ngb-modal-window .component-host-scrollable {
+        overflow: auto;
+
+    }
+} */
+
+
 .custom-slider .ngx-slider {
         
         width: 70% !important;
@@ -197,8 +211,3 @@ body {
     box-shadow: 0 0 0 0.25rem #ff46133b;
 }
 
-
-
-
-
-  

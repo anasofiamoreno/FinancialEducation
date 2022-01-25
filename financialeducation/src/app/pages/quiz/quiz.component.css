@@ -65,10 +65,29 @@ background-size: cover;
 background-image: url(/assets/img/tipoCambio.gif);
 }
 
-.img-resp{
-max-width: 20vw;
-height: auto;
+#question1{
+  height: 550px;
 }
+#question2{
+  height: 550px;
+}
+#question3{
+  height: 550px;
+}
+#question4{
+  height: 550px;
+}
+#question5{
+  height: 550px;
+}
+
+.img-resp{
+  height: 150px;
+  width: 150px;
+  max-width: 20vw;
+  height: auto;
+}
+
 .img-resp-quest3{
 
   max-width: 15vw;
@@ -79,18 +98,12 @@ height: auto;
 margin-right: 8%;
 }
 
-/* .register {
-width: 200px;
-border: none;
-border-bottom: 2px solid rgb(0, 0, 0);
-border-radius: none;
-background: none;
-outline: 0px;
-} */
 
 select{
 color:gray
 }
+
+/* BARRA  */
 
 .circle-step{
   padding: 30px;
@@ -107,7 +120,8 @@ color:gray
   width: 7vw;
   position: fixed;
   left: 0%;
-  top: 100px;
+  top: 120px;
+  bottom: 50px;
 }
 
 .quiz-view{
@@ -126,7 +140,7 @@ color:gray
 }
 
 .bbgred{
-  background-color: red;
+  background-color: #FFCE00;
 }
 
 .bbwhite{

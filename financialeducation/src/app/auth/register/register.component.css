@@ -5,7 +5,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: auto;
+
+}
+.contenedor img {
+    overflow: hidden;
 }
 
 .textName {
@@ -77,7 +80,7 @@
     justify-content: center;
     width: 250px;
     height: 250px;
-    background: url(src/assets/img/level/elf1.png);
+    /* background-image: url({{levelimage}}); */
 }
 
 .img-elfo {
