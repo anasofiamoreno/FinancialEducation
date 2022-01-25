@@ -25,5 +25,22 @@ export class AdminService {
     return await getDocs(q);
     
   }
+
+  async  subCat(categoria: string){
+
+    const q = query(collection(this.bd, "costumer"), where(categoria, "!=", true));
+    return await getDocs(q);
+    
+  }
+
+  async getSubFilter(){
+    
+    const q = query(collection(this.bd, "costmer"));
+
+    const querySnapshot = await query(collection(this.bd, "costmer"), where("city", "!=", false));
+    console.log(querySnapshot)
+  
+    return querySnapshot
+  }
   
 }
