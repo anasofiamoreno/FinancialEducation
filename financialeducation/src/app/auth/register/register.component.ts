@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
 	state: string = '';
 	city: string = '';
 	study: string = 'Estudios';
-	job: string = 'Ocupacion';
+	job: string = 'Ocupación';
 	passwordmessage: string = '';
 	levelgeded: number = 0;
 	namelevel: string = '';
@@ -96,8 +96,8 @@ export class RegisterComponent implements OnInit {
 			return alert('Datos Incompletos, revise correo y constraseña');
 		}
 
-		if (this.cp.length <= 4 || this.job == 'Ocupacion' || this.study == 'Estudios') {
-			return alert('Datos Incompletos, CP, Ocupacion o Estudios');
+		if (this.cp.length <= 4 || this.job == 'Ocupación' || this.study == 'Estudios') {
+			return alert('Datos Incompletos, CP, Ocupación o Estudios');
 		}
 
 		await createUserWithEmailAndPassword(this.auth, this.email, this.password)
@@ -155,23 +155,23 @@ export class RegisterComponent implements OnInit {
 			case 1:
 
 				this.namelevel = 'Modo Zombie';
-				this.levelimage = 'assets/img/courses/zombie.gif';
+				this.levelimage = 'assets/img/piclevel/zombie.gif';
 				break;
 			case 2:
 				this.namelevel = 'Modo Survivor';
-				this.levelimage = 'assets/img/courses/survivor.gif';
+				this.levelimage = 'assets/img/piclevel/survivor.gif';
 				break;
 			case 3:
 				this.namelevel = 'Modo Ejecutivo';
-				this.levelimage = 'assets/img/courses/executive.gif';
+				this.levelimage = 'assets/img/piclevel/executive.gif';
 				break;
 			case 4:
 				this.namelevel = 'Modo Elite';
-				this.levelimage = 'assets/img/courses/elite.gif';
+				this.levelimage = 'assets/img/piclevel/elite.gif';
 				break;
 			case 5:
 				this.namelevel = 'Modo Leyenda';
-				this.levelimage = 'assets/img/courses/legend.gif';
+				this.levelimage = 'assets/img/piclevel/legend.gif';
 				break;
 			default:
 		}
