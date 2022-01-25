@@ -24,10 +24,11 @@ Estudiantes y/o trabajadores
  [prototipo de alto nivel](https://www.figma.com/file/GxE0a2uM1ISEVsq2hGJz9L/Untitled?node-id=0%3A1)
 
 *Home
- 
+ ![Home](sketh.png)
  *Quiz
- 
+ ![Quiz](sketh.png)
  *Courses
+ ![Courses](sketh.png)
 ## Construido con 🛠️
 ### Framework:
 <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> [Angular](https://angular.io/) 
