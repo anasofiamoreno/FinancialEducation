@@ -27,6 +27,12 @@ body {
 } */
 
 
+.sidebar[_ngcontent-gfn-c115] {
+   
+    top: 80px;
+   height: 0 !important;
+}
+
 .custom-slider .ngx-slider {
         
         width: 70% !important;

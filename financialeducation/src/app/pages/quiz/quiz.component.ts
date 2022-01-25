@@ -133,35 +133,35 @@ export class QuizComponent implements OnInit {
     const scroll = this.ss.scrollY
    
 
-    if(scroll<=949){
+    if(scroll<=800){
       this.step01 = true
       this.step02 = false
       this.step03 = false
       this.step04 = false
       this.step05 = false
     }
-    if(scroll>= 950 && scroll<=1499){
+    if(scroll>= 801 && scroll<=1300){
       this.step01 = false
       this.step02 = true
       this.step03 = false
       this.step04 = false
       this.step05 = false
     }
-    if(scroll>= 1500 && scroll<=1999){
+    if(scroll>= 1301 && scroll<=1800){
       this.step01 = false
       this.step02 = false
       this.step03 = true
       this.step04 = false
       this.step05 = false
     }
-    if(scroll>= 2000 && scroll<=2399){
+    if(scroll>= 1801 && scroll<=2300){
       this.step01 = false
       this.step02 = false
       this.step03 = false
       this.step04 = true
       this.step05 = false
     }
-    if(scroll>= 2400){
+    if(scroll>= 2301){
       this.step01 = false
       this.step02 = false
       this.step03 = false
