@@ -1,0 +1,63 @@
+<div class="border contenedor">
+  <div class=" header p-4">
+    <img class="logo" src="assets/img/Logo-BlackRock.png" alt="" />
+
+    <img (click)="closeModal()" class="x" src="assets/img/close-black.png" alt="" />
+  </div>
+
+  <div>
+    <div class=" d-flex flex-row align-items-center mx-3 ">
+      <h4 class="mb-0">Datos del Perfil</h4> 
+      <img *ngIf="!editing" src="assets/img/edit.png" class="edit mx-3"alt="" (click)="editData()">
+      <img *ngIf="editing" src="assets/img/save.png" class="edit mx-3"alt="" (click)="saveData()">
+      <p *ngIf="editing" class="edit my-0" alt="" (click)="cancelData()">Cancelar</p>
+    </div>
+    
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Nombre</p>
+      <input class="mx-3 editing" type="text" name="nameuser" [(ngModel)]="name" readonly />
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Correo Electronico</p>
+      <input class="mx-3 editing" type="text" name="emailuser" [(ngModel)]="email" readonly/>
+    </div>
+    <div *ngIf="editing" class="lineofdata">
+      <p class="mb-0 mx-3">Contraseña Actual </p>
+      <input class="mx-3 editing" type="text" name="oldpassworduserepited" [(ngModel)]="oldpassword" style="border-width: 2px; border-bottom-style: solid"/>
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Contraseña</p>
+      <input class="mx-3 editing" type="text" name="passworduser" [(ngModel)]="password" readonly/>
+    </div>
+    <div *ngIf="editing" class="lineofdata">
+      <p class="mb-0 mx-3">Repetir Contraseña</p>
+      <input class="mx-3 editing" type="text" name="passworduserepited" [(ngModel)]="passwordRepeat" style="border-width: 2px; border-bottom-style: solid"/>
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Ocupación</p>
+      <input class="mx-3 editing" type="text" name="jovuser" [(ngModel)]="job" readonly/>
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Estado</p>
+      <input class="mx-3 editing" type="text" name="stateuser" [(ngModel)]="state" readonly/>
+    </div>
+    <div class="lineofdata">
+      <p class="mb-0 mx-3">Ciudad</p>
+      <input class="mx-3 editing" type="text" name="cityuser" [(ngModel)]="city" readonly/>
+    </div>
+  </div>
+  <div>
+    <h4 class="mx-3 my-3">Avance de Aprendizaje</h4>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+  <div class="d-flex flex-column justifi-content-center mx-5 mb-3">
+    <button (click)="closeS()" >Cerrar Sesión</button>
+  </div>
+</div>
+
