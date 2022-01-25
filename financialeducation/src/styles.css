@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
-@import '~ng-wizard/themes/ng_wizard.min.css';
-@import '~ng-wizard/themes/ng_wizard_theme_circles.min.css';
+/* @import '~ng-wizard/themes/ng_wizard.min.css';
+@import '~ng-wizard/themes/ng_wizard_theme_circles.min.css'; */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
@@ -196,6 +196,9 @@ body {
     border-color: #FF4713;
     box-shadow: 0 0 0 0.25rem #ff46133b;
 }
+
+
+
 
 
   

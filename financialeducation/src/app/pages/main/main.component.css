@@ -8,7 +8,6 @@ main {
 /* PRIMERA SECCION */
 
 .contenedor {
-  padding-left: 50px;
   height: 500px;
   align-items: center;
 }
@@ -41,25 +40,25 @@ h3 {
 /* SEGUNDO PARRAFO */
 
 .seccion-2 {
-  display: flex;
+display: flex;
+flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 280px;
   background-color: #FFCE00;
-  z-index: 1;
-  flex-wrap: wrap;
+/*   z-index: 1; */
+ /*  flex-wrap: wrap; */
 }
 
 .parrafo2 {
-  margin-top: 20px;
   font-size: 27px;
-  width: 1300px;
   font-weight:normal;
 }
 
 .firma {
-  width: 500px;
+  /* width: 500px; */
+  /* width: 50%;  */
   font-weight: lighter;
   font-size: 20px;
   font-weight: lighter;
@@ -70,12 +69,9 @@ h3 {
 
 .image2 {
   width: 500px;
-  padding-left: 150px;
 }
 
 .text3 {
-  padding-top: 100px;
-  padding-right: 100px;
   text-align: right;
   font-weight: normal;
   font-size: 25px;
@@ -87,19 +83,12 @@ h3 {
 }
 
 .parrafo3 {
-  margin-top: 20px;
   font-size: 22px;
 }
 
 /* SECCION CUATRO  */
 
 .seccion-4 {
-  padding-top: 50px;
-  padding-left: 100px;
-  padding-bottom: 50px;
-
-  text-align: left;
-  font-weight: normal;
   font-size: 25px;
 } 
 
@@ -116,8 +105,7 @@ h3 {
 }
 
 .button-quiz-2 {
-  margin-top: 120px;
-  margin-left: 200px;
+ 
   width: 200px;
   height: 50px;
   font-weight: bold;
