@@ -12,7 +12,11 @@ export class HomeComponent implements OnInit {
 	ngOnInit(): void {
 		onAuthStateChanged(this.auth, (user) => {
 			if (user) {
-				window.location.href = '/courses';
+				if (user.email == 'admin@administrador.com') {
+					window.location.href = '/admin';
+				} else {
+					window.location.href = '/courses';
+				}
 			}
 		});
 	}
