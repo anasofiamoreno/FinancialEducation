@@ -6,7 +6,6 @@ import {
   Auth,
   getAuth,
   signInWithEmailAndPassword,
-  signOut,
   updatePassword,
 } from '@angular/fire/auth';
 import { Firestore, updateDoc, doc, getDoc } from '@angular/fire/firestore';
@@ -35,11 +34,6 @@ export class EdituserinfoComponent implements OnInit {
     private db: Firestore,
     private servicePage: ServicesService
   ) {}
-
-  closeS() {
-    signOut(this.auth);
-    window.location.href = '/';
-  }
 
   closeModal() {
     this.modalService.dismissAll();
