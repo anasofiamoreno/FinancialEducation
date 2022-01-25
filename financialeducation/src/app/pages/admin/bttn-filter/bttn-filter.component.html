@@ -3,7 +3,7 @@
           
             <div class="col-auto">
                 <div class="form-floating">
-                  <select class="register" id="inputGroupSelect01" formControlName="categoria">
+                  <select class="register" (mouseleave)="subcat()" id="inputGroupSelect01" formControlName="categoria">
                     <option hidden selected class="colorSelect">Categoria</option>
                     <option value="age">Edad</option>
                     <option value="state">Estado</option>
@@ -15,8 +15,10 @@
 
             <div class="col-auto">
               <div class="form-floating">
-                <input  class="form-control" id="floatingInputGrid" placeholder="Nombre" formControlName="subcategoria">
-                <label for="floatingInputGrid">Subcategoria:</label>
+                <select name="" id="" formControlName="subcategoria">
+                  <option *ngFor="let item of subCat" value={{item}}>{{item}}</option>
+                </select>
+                <label *ngIf="subCat.length == 0" for="floatingInputGrid">Subcategoria:</label>
               </div>
             </div>
             
