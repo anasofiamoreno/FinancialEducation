@@ -16,10 +16,11 @@
 }
 
 .img-size{
-    width: 80%;
+    max-width: 80%;
     transition-duration: .5s;
     border: white;
 }
+
 
 .img-size-course{
     height: 300px;
@@ -66,6 +67,11 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+}
+
+.img-size-course2{
+
+   width: 50%;
 }
 
 .groupcurses{
@@ -119,3 +125,37 @@ background-color: orangered;
 .w-40{
     width: 40%;
 }
+
+@media (max-width: 600px) {
+    .level-group{
+        display: flex;
+        flex-direction: column ;
+        
+        /* overflow: hidden; */
+    }
+    .img-size{
+        max-width: 60%;
+    }
+
+    .groupcurses{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentlevel{
+        display: flex;
+        flex-direction: column;
+    
+        }
+
+        .img-size-course{
+            height: 30vh;
+           width: 70vw;
+        }
+
+        .img-size-course2{
+            height: 70vh;
+           width: 90vw;
+        }
+    }
+  
