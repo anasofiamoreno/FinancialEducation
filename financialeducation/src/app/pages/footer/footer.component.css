@@ -3,10 +3,7 @@
 
 
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 110px;
+  height: 100px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
 }
