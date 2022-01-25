@@ -54,30 +54,28 @@ display: none;
 /* Radio personalizado usando <span> */
 .custom-radio-checkbox > .custom-radio-checkbox__show {
 display: inline-block;
-width: 80px;
-height: 80px;
+min-width: 80px;
+min-height: 80px;
 margin-right: .5rem;
 background-size: cover;
 }
 
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+	.custom-radio-checkbox > .custom-radio-checkbox__show {
+  
+    min-width: 50px;
+    min-height: 50px;
+   
+  }
+} 
 /* Cambia el radio personalizado cuando es pulsado */
 .custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
 background-image: url(/assets/img/tipoCambio.gif);
 }
 
-#question1{
-  height: 550px;
+.ancho-p {
+  min-width: 30%;
 }
-#question2{
-  height: 550px;
-}
-#question3{
-  height: 550px;
-}
-#question4{
-  height: 550px;
-}
-
 
 .img-resp{
   height: 150px;
@@ -213,4 +211,13 @@ select {
 select:focus {
   outline: none;
   border-bottom: 2px solid #FFCE00;
+}
+
+
+.gallery img{
+  width: 60%;
+}
+
+.text-datos {
+  font-size: calc(0.6rem + 1vw);
 }

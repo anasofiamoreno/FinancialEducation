@@ -14,35 +14,35 @@
     </div>
     
     <div class="lineofdata">
-      <p class="mb-0 mx-3">Nombre</p>
+      <p class="mb-0 mx-3 fw-bold">Nombre</p>
       <input class="mx-3 editing" type="text" name="nameuser" [(ngModel)]="name" readonly />
     </div>
     <div class="lineofdata">
-      <p class="mb-0 mx-3">Correo Electronico</p>
+      <p class="mb-0 mx-3 fw-bold">Correo Electronico</p>
       <input class="mx-3 editing" type="text" name="emailuser" [(ngModel)]="email" readonly/>
     </div>
     <div *ngIf="editing" class="lineofdata">
-      <p class="mb-0 mx-3">Contraseña Actual </p>
+      <p class="mb-0 mx-3 ">Contraseña Actual </p>
       <input class="mx-3 editing" type="text" name="oldpassworduserepited" [(ngModel)]="oldpassword" style="border-width: 2px; border-bottom-style: solid"/>
     </div>
     <div class="lineofdata">
-      <p class="mb-0 mx-3">Contraseña</p>
+      <p class="mb-0 mx-3 fw-bold">Contraseña</p>
       <input class="mx-3 editing" type="text" name="passworduser" [(ngModel)]="password" readonly/>
     </div>
     <div *ngIf="editing" class="lineofdata">
-      <p class="mb-0 mx-3">Repetir Contraseña</p>
+      <p class="mb-0 mx-3 fw-bold">Repetir Contraseña</p>
       <input class="mx-3 editing" type="text" name="passworduserepited" [(ngModel)]="passwordRepeat" style="border-width: 2px; border-bottom-style: solid"/>
     </div>
     <div class="lineofdata">
-      <p class="mb-0 mx-3">Ocupación</p>
+      <p class="mb-0 mx-3 fw-bold">Ocupación</p>
       <input class="mx-3 editing" type="text" name="jovuser" [(ngModel)]="job" readonly/>
     </div>
     <div class="lineofdata">
-      <p class="mb-0 mx-3">Estado</p>
+      <p class="mb-0 mx-3 fw-bold">Estado</p>
       <input class="mx-3 editing" type="text" name="stateuser" [(ngModel)]="state" readonly/>
     </div>
     <div class="lineofdata">
-      <p class="mb-0 mx-3">Ciudad</p>
+      <p class="mb-0 mx-3 fw-bold">Ciudad</p>
       <input class="mx-3 editing" type="text" name="cityuser" [(ngModel)]="city" readonly/>
     </div>
   </div>

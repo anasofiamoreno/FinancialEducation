@@ -37,3 +37,7 @@ nav {
 .button-1:hover {
   background-color: #545454;
 }
+
+.options {
+  cursor: pointer;
+}
