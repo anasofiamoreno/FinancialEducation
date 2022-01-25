@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/* import { Component, OnInit } from '@angular/core';
 import { NgWizardService, STEP_STATE, THEME, NgWizardConfig, StepChangedArgs, StepValidationArgs } from 'ng-wizard';
 import { of } from 'rxjs';
 import { InfoService } from '../services/info.service';
@@ -75,3 +75,4 @@ export class WizardsComponent implements OnInit {
 }
 
 
+ */
