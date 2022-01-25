@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Auth, onAuthStateChanged } from '@angular/fire/auth';
+import { Auth, onAuthStateChanged, signOut } from '@angular/fire/auth';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesAuth } from 'src/app/auth/services/services.Auth';
 import { LoginComponent } from '../../auth/login/login.component';
@@ -11,6 +11,7 @@ import { InfoService } from '../services/info.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
 
   name: string | undefined = ""
@@ -41,6 +42,11 @@ export class HeaderComponent implements OnInit {
 
         });
         
+      }
+
+      closeS() {
+        signOut(this.auth);
+        window.location.href = '/';
       }
 
   ngOnInit(): void {

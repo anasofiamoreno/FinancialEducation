@@ -16,7 +16,15 @@
                 <button  class="nav1 button-1" *ngIf="email == '' && path != '/quiz'" (click)="openModal()">Iniciar sesion</button>
               </li>
               <li class="nav-item">
-                <button class="nav1 button-1" *ngIf="email!= ''" (click)="openModalUser()" >Usuario</button>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle nav1 button-1" *ngIf="email!= ''" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Usuario
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item " (click)="openModalUser()">Editar usuario</a></li>
+                    <li><a class="dropdown-item"  (click)="closeS()">Cerrar sesión</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
             

@@ -1,10 +1,10 @@
-<div class="d-flex justify-content-center m-5">
-    <form [formGroup]="formFilter" (ngSubmit)="filterAdmin()" class="row g-3">
+<div class="m-5">
+    <form [formGroup]="formFilter" (ngSubmit)="filterAdmin()" class="row g-3 d-flex justify-content-center align-items-center">
           
             <div class="col-auto">
-                <div class="form-floating">
+                <div class="form-floating input-group">
                   <select class="register" (mouseleave)="subcat()" id="inputGroupSelect01" formControlName="categoria">
-                    <option hidden selected class="colorSelect">Categoria</option>
+                    <option value="" hidden selected class="colorSelect">Categoria</option>
                     <option value="age">Edad</option>
                     <option value="state">Estado</option>
                     <option value="sex">Género</option>
@@ -14,7 +14,7 @@
               </div> 
 
             <div class="col-auto">
-              <div class="form-floating">
+              <div class="form-floating input-group">
                 <select name="" id="" formControlName="subcategoria">
                   <option *ngFor="let item of subCat" value={{item}}>{{item}}</option>
                 </select>
@@ -23,19 +23,19 @@
             </div>
             
             <div class="col-auto">
-              <div class="form-floating">
+              <div class="form-floating input-group">
               <button type="submit" class="btn btn-warning " [disabled]="formFilter.invalid">Enviar</button>
             </div>
            </div> 
         
-   
     </form>
  </div>
 
 
- <div>
+<div class="container-fluid">
    <!-- <p>{{item['city']}}</p> -->
-   <table class="table m-5">
+  <div class="m-5">
+   <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">Nombre</th>
@@ -43,8 +43,6 @@
         <th scope="col">Edad</th>
         <th scope="col">Estado</th>
         <th scope="col">Ciudad</th>
-        
-        
       </tr>
     </thead>
     <tbody>
@@ -54,12 +52,9 @@
         <td>{{item['age']}}</td>
         <td>{{item['state']}}</td>
         <td>{{item['city']}}</td>
-       
-       
-          
       </tr>
     </tbody>
-  </table>  
-   
- </div>
+    </table>  
+  </div>
+</div>
  
